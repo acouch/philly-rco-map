@@ -52,7 +52,7 @@
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v11',
         center: [lon, lat],
-        zoom: 10
+        zoom: 13
       });
       fetch(geo_file)
       .then(response => response.json())
@@ -65,35 +65,77 @@
         // 
         map.on('load', () => {
           let i = 0;
-          console.log(data);
           let centerData=[];
-
+          let hoveredPolygonId = null;
           data.features.forEach(rco => {
 
             if (rco.properties.ORG_TYPE == "Other") {
               let id = String(rco.properties.OBJECTID);
               const center = turf.center(rco.geometry);
+              rco.id = id;
 
-              map.addSource(id, {
+              map.addSource(id + '-source', {
                 'type': 'geojson',
-                'data': rco.geometry
+                'data': rco
               });
               map.addLayer({
                 'id': id,
                 'type': 'fill',
-                'source': id,
+                'source': id + '-source',
                 'paint': {
-                  'fill-opacity': 0.5,
+                  'fill-opacity': [
+                    'case',
+                    ['boolean', ['feature-state', 'hover'], false],
+                    1,
+                    0.5
+                    ],
                   'fill-color': colors[i],
                 }
               });
+              map.addLayer({
+                'id': id + '-line',
+                'type': 'line',
+                'source': id + '-source',
+                'paint': {
+                  'line-color': '#444',
+                  'line-width': 1
+                  }
+              });
+
+              // When the user moves their mouse over the state-fill layer, we'll update the
+              // feature state for the feature under the mouse.
+              map.on('mousemove', id, (e) => {
+                if (e.features.length > 0) {
+                  if (hoveredPolygonId !== null) {
+                    map.setFeatureState(
+                      { source: id + '-source', id: hoveredPolygonId },
+                      { hover: false }
+                    );
+                  }
+                  hoveredPolygonId = e.features[0].id;
+                  map.setFeatureState(
+                    { source: id + '-source', id: hoveredPolygonId },
+                    { hover: true }
+                    );
+                  }
+                });
+                
+                // When the mouse leaves the state-fill layer, update the feature state of the
+                // previously hovered feature.
+                map.on('mouseleave', id, () => {
+
+                  map.setFeatureState(
+                    { source: id + '-source', id: id },
+                    { hover: false }
+                  );
+                  hoveredPolygonId = null;
+                });
 
               const el = document.createElement('div');
               const text = document.createTextNode(rco.properties.ORGANIZATION_NAME);
               el.append(text);
               el.className = 'label';
               
-              console.log(center.geometry.coordinates);
               // Add markers to the map.
               new mapboxgl.Marker(el)
               .setLngLat(center.geometry.coordinates)
