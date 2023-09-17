@@ -13,6 +13,8 @@
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
     <script src="./colors.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
  
   </head>
   <body>
@@ -25,8 +27,12 @@
     
         <div class="row g-5">
           <div class="col-md-2">
-            <h2 class="text-body-emphasis">Starter projects</h2>
-            <p>Ready to beyond the starter template? Check out these open source projects that you can quickly duplicate to a new GitHub repository.</p>
+            <h2 class="text-body-emphasis">Organizations</h2>
+            <h3>Selected</h3>
+            <ul id="selected-orgs"></ul>
+            <button id="clear-selected" style="visibility: hidden">clear selected</button>
+            <h3>Full list</h3>
+            <ul id="window-orgs"></ul>
           </div>
     
           <div class="col-md-10">
@@ -38,7 +44,6 @@
         </div>
       </main>
       <footer class="pt-5 my-5 text-body-secondary border-top">
-        Created by the Bootstrap team &middot; &copy; 2023
       </footer>
     </div>
     <script>
@@ -46,13 +51,117 @@
       const lon = '-75.16361';
       const geo_file = './Zoning_RCO-6p.geojson';
 
+      let store = [];
+
+      const clearButton = document.getElementById('clear-selected');
+      clearButton.addEventListener("click", function(e) {
+        emptyStore();
+      }, false);
+
+      function selectList(id, data) {
+        const index = store.indexOf(id);
+        console.log(store, index)
+        // remove item
+        if (index != -1) {
+          store.splice(index, 1);
+          removeFromList(`org-${id}`);
+          // store is empty
+          if (index == 0) {
+            emptyStore();
+          }
+        }
+        // add item
+        else {
+          clearButton.style.visibility = 'visible';
+          let org = getOrgPropertyFromData(id, data);
+          store.push(id);
+          addToList([org], "selected-orgs");
+        }
+      }
+
+      function emptyStore() {
+        store = [];
+        document.getElementById("selected-orgs").innerHTML = "";
+        const button = document.getElementById('clear-selected');
+        button.style.visibility = 'hidden';
+      }
+
+      function renderListings(features) {
+        // Clear list, first.
+        document.getElementById("window-orgs").innerHTML = "";
+
+        console.log(features);
+        let orgs = [];
+        for (i in features) {
+          console.log(features[i].properties);
+          console.log(typeof(features[i].properties));
+
+          orgs.push(features[i].properties);
+        }
+        console.log(orgs);
+        addToList(orgs, "window-orgs");
+      }
+
+      function addMultipleToList(features, identifier) {
+
+      }
+
+      function addToList(orgs, identifier) {
+        let ul = document.getElementById(identifier);
+        for (i in orgs) {
+          
+          let el = listTemplate(orgs[i]);
+          let li = htmlCreateLi(el);
+          ul.appendChild(li);
+        }
+      }
+
+      let htmlCreateLi = (function (){
+        const el = document.createElement('li');
+     
+        return function(html){
+            let item;
+            el.innerHTML = html;
+            item = el.firstChild;
+            el.removeChild(item);
+            return item;
+        }
+     })();
+
+      function listTemplate(org) {
+        const name = org.ORGANIZATION_NAME;
+        return `<li id="org-${org.OBJECTID}" class="org-entry">${name}</li>`
+      }
+
+      function removeFromList(id) {
+        console.log("removing", id)
+        const element = document.getElementById(id);
+        element.remove(); 
+      }
+
+      function getOrgPropertyFromData(id, data) {
+        return data.features[id-1].properties;
+      }
+
+      function getUniqueFeatures(features, comparatorProperty) {
+        const uniqueIds = new Set();
+        const uniqueFeatures = [];
+        for (const feature of features) {
+          const id = feature[comparatorProperty];
+          if (!uniqueIds.has(id)) {
+            uniqueIds.add(id);
+            uniqueFeatures.push(feature);
+          }
+        }
+        return uniqueFeatures;
+      }
     
       mapboxgl.accessToken = 'pk.eyJ1IjoiYWNvdWNoMSIsImEiOiJDTy0zMFJrIn0.hewU0mOW08Wm5-0-Qr8TpQ';
       const map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v11',
         center: [lon, lat],
-        zoom: 13
+        zoom: 15
       });
       fetch(geo_file)
       .then(response => response.json())
@@ -66,6 +175,7 @@
         map.on('load', () => {
           let i = 0;
           let centerData=[];
+          let layersOnMap = [];
           let hoveredPolygonId = null;
           data.features.forEach(rco => {
 
@@ -92,6 +202,7 @@
                   'fill-color': colors[i],
                 }
               });
+              layersOnMap.push(id);
               map.addLayer({
                 'id': id + '-line',
                 'type': 'line',
@@ -102,6 +213,11 @@
                   }
               });
 
+
+              map.on('click', id, (e) => {
+                selectList(id, data);
+              });
+                 
               // When the user moves their mouse over the state-fill layer, we'll update the
               // feature state for the feature under the mouse.
               map.on('mousemove', id, (e) => {
@@ -142,6 +258,34 @@
               .addTo(map);
             }
             i++;
+          });
+
+          map.addControl(
+            new MapboxGeocoder({
+              accessToken: mapboxgl.accessToken,
+              mapboxgl: mapboxgl
+            })
+          );
+
+          map.addControl(new mapboxgl.NavigationControl());
+
+          map.on('moveend', () => {
+            //console.log(layersOnMap);
+            console.log('tripped')
+            const features = map.queryRenderedFeatures({ layers: layersOnMap});
+             
+            if (features) {
+              const uniqueFeatures = getUniqueFeatures(features, 'id');
+              //console.log(uniqueFeatures);
+              renderListings(uniqueFeatures);
+                
+              // Clear the input container
+              //filterEl.value = '';
+                
+              // Store the current features in sn `airports` variable to
+              // later use for filtering on `keyup`.
+              //airports = uniqueFeatures;
+            }
           });
         });
       });
