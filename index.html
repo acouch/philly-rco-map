@@ -26,7 +26,7 @@
         <hr class="col-3 col-md-2 mb-5">
     
         <div class="row g-5">
-          <div class="col-md-2">
+          <div class="col-md-3">
             <h2 class="text-body-emphasis">Organizations</h2>
             <h3>Selected</h3>
             <ul id="selected-orgs"></ul>
@@ -35,7 +35,7 @@
             <ul id="window-orgs"></ul>
           </div>
     
-          <div class="col-md-10">
+          <div class="col-md-9">
             <h2 class="text-body-emphasis">Map</h2>
             <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
             <div id="map"></div>
@@ -60,7 +60,6 @@
 
       function selectList(id, data) {
         const index = store.indexOf(id);
-        console.log(store, index)
         // remove item
         if (index != -1) {
           store.splice(index, 1);
@@ -89,21 +88,11 @@
       function renderListings(features) {
         // Clear list, first.
         document.getElementById("window-orgs").innerHTML = "";
-
-        console.log(features);
         let orgs = [];
         for (i in features) {
-          console.log(features[i].properties);
-          console.log(typeof(features[i].properties));
-
           orgs.push(features[i].properties);
         }
-        console.log(orgs);
         addToList(orgs, "window-orgs");
-      }
-
-      function addMultipleToList(features, identifier) {
-
       }
 
       function addToList(orgs, identifier) {
@@ -134,7 +123,6 @@
       }
 
       function removeFromList(id) {
-        console.log("removing", id)
         const element = document.getElementById(id);
         element.remove(); 
       }
@@ -161,17 +149,12 @@
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v11',
         center: [lon, lat],
-        zoom: 15
+        zoom: 11
       });
       fetch(geo_file)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
-        // types = getTypes(map)
 
-        // make buttons with types
-
-        // 
         map.on('load', () => {
           let i = 0;
           let centerData=[];
@@ -270,21 +253,11 @@
           map.addControl(new mapboxgl.NavigationControl());
 
           map.on('moveend', () => {
-            //console.log(layersOnMap);
-            console.log('tripped')
             const features = map.queryRenderedFeatures({ layers: layersOnMap});
              
             if (features) {
               const uniqueFeatures = getUniqueFeatures(features, 'id');
-              //console.log(uniqueFeatures);
               renderListings(uniqueFeatures);
-                
-              // Clear the input container
-              //filterEl.value = '';
-                
-              // Store the current features in sn `airports` variable to
-              // later use for filtering on `keyup`.
-              //airports = uniqueFeatures;
             }
           });
         });
