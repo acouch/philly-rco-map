@@ -37,7 +37,7 @@
     
           <div class="col-md-9">
             <h2 class="text-body-emphasis">Map</h2>
-            <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
+            <p><div id="layer-toggle"></div></p>
             <div id="map"></div>
             <div id="labels"></div>
           </div>
@@ -52,11 +52,33 @@
       const geo_file = './Zoning_RCO-6p.geojson';
 
       let store = [];
+      let currentType = "Other";
 
       const clearButton = document.getElementById('clear-selected');
       clearButton.addEventListener("click", function(e) {
         emptyStore();
       }, false);
+
+      function addLayerToggle(types, map, data) {
+        let div = document.getElementById("layer-toggle");
+
+        types.forEach(type => {
+          let el = toggleTemplate(type);
+          let button = htmlCreate('button', el);
+          div.appendChild(button);
+          button.addEventListener("click", function(e) {
+            removeLayers(map, data, type);
+            addLayers(map, data, type);
+            const typesToHide = types.filter(function(t){ return t != type});
+            console.log(typesToHide);
+            typesToHide.forEach(toHide => {
+              hideLabels(toHide);
+            })
+            showLabels(type);
+            currentType = type;
+          }, false);
+        });
+      }
 
       function selectList(id, data) {
         const index = store.indexOf(id);
@@ -100,26 +122,27 @@
         for (i in orgs) {
           
           let el = listTemplate(orgs[i]);
-          let li = htmlCreateLi(el);
+          let li = htmlCreate('li', el);
           ul.appendChild(li);
         }
       }
 
-      let htmlCreateLi = (function (){
-        const el = document.createElement('li');
-     
-        return function(html){
-            let item;
-            el.innerHTML = html;
-            item = el.firstChild;
-            el.removeChild(item);
-            return item;
-        }
-     })();
+      function htmlCreate (type, html) {
+        const el = document.createElement(type);  
+        let item;
+        el.innerHTML = html;
+        item = el.firstChild;
+        el.removeChild(item);
+        return item;
+     };
 
       function listTemplate(org) {
         const name = org.ORGANIZATION_NAME;
         return `<li id="org-${org.OBJECTID}" class="org-entry">${name}</li>`
+      }
+
+      function toggleTemplate(type) {
+        return `<button id="button-${type}">${type}</button>`;
       }
 
       function removeFromList(id) {
@@ -144,7 +167,138 @@
         return uniqueFeatures;
       }
     
+      function addSourcesEvents(map, data) {
+        let hoveredPolygonId = null;
+        const types = [];
+        let layersOnMap = [];
+
+        data.features.forEach(rco => {
+          let id = String(rco.properties.OBJECTID);
+          let type = String(rco.properties.ORG_TYPE);
+
+          const center = turf.center(rco.geometry);
+          rco.id = id;
+          if (types.indexOf(type) == -1) {
+            types.push(type);
+          }
+          if (type in layersOnMap) {
+            layersOnMap[type].push(id);
+          }
+          else {
+            layersOnMap[type] = [];
+
+          }
+
+          map.addSource(id + '-source', {
+            'type': 'geojson',
+            'data': rco
+          });
+          map.on('click', id, (e) => {
+            selectList(id, data);
+          });
+
+          map.on('mousemove', id, (e) => {
+            if (e.features.length > 0) {
+              if (hoveredPolygonId !== null) {
+                map.setFeatureState(
+                  { source: id + '-source', id: hoveredPolygonId },
+                  { hover: false }
+                );
+              }
+              hoveredPolygonId = e.features[0].id;
+              map.setFeatureState(
+                { source: id + '-source', id: hoveredPolygonId },
+                { hover: true }
+                );
+              }
+            });
+              
+          // When the mouse leaves the state-fill layer, update the feature state of the
+          // previously hovered feature.
+          map.on('mouseleave', id, () => {
+
+            map.setFeatureState(
+              { source: id + '-source', id: id },
+              { hover: false }
+            );
+            hoveredPolygonId = null;
+          });
+                      
+          // Add markers to the map.
+          const el = document.createElement('div');
+          const text = document.createTextNode(rco.properties.ORGANIZATION_NAME);
+          el.append(text);
+          el.className = 'label-' + type;
+          new mapboxgl.Marker(el)
+            .setLngLat(center.geometry.coordinates)
+            .addTo(map);     
+        });
+        addLayerToggle(types, map, data);
+        return layersOnMap;
+      }
+
+      function hideLabels(type) {
+        console.log(type)
+        labels = document.getElementsByClassName('label-' + type);
+        for(var i = 0; i < labels.length; i++){
+          labels[i].style.visibility = "hidden";
+        }
+      }
+
+      function showLabels(type) {
+        labels = document.getElementsByClassName('label-' + type);
+        for(var i = 0; i < labels.length; i++){
+          labels[i].style.visibility = 'visible';
+        }
+      }
+
+      function addLayers(map, data, type) {
+        let i = 0;
+
+        data.features.forEach(rco => {
+          if (rco.properties.ORG_TYPE == type) {
+            let id = String(rco.properties.OBJECTID);
+            const center = turf.center(rco.geometry);
+            rco.id = id;
+            map.addLayer({
+              'id': id,
+              'type': 'fill',
+              'source': id + '-source',
+              'paint': {
+                'fill-opacity': [
+                  'case',
+                  ['boolean', ['feature-state', 'hover'], false],
+                  1,
+                  0.5
+                  ],
+                'fill-color': colors[i],
+              }
+            });
+            map.addLayer({
+              'id': id + '-line',
+              'type': 'line',
+              'source': id + '-source',
+              'paint': {
+                'line-color': '#444',
+                'line-width': 1
+                }
+            });
+          }
+          i++;
+        });
+      }
+
+      function removeLayers(map, data, type) {
+        data.features.forEach(rco => {
+          if (rco.properties.ORG_TYPE != type) {
+            let id = String(rco.properties.OBJECTID);
+            if (map.getLayer(id)) map.removeLayer(id);
+            if (map.getLayer(id + '-line')) map.removeLayer(id + '-line');
+          }
+        });
+      } 
       mapboxgl.accessToken = 'pk.eyJ1IjoiYWNvdWNoMSIsImEiOiJDTy0zMFJrIn0.hewU0mOW08Wm5-0-Qr8TpQ';
+
       const map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v11',
@@ -154,95 +308,20 @@
       fetch(geo_file)
       .then(response => response.json())
       .then(data => {
+        console.log(data);
 
         map.on('load', () => {
-          let i = 0;
-          let centerData=[];
-          let layersOnMap = [];
-          let hoveredPolygonId = null;
-          data.features.forEach(rco => {
 
-            if (rco.properties.ORG_TYPE == "Other") {
-              let id = String(rco.properties.OBJECTID);
-              const center = turf.center(rco.geometry);
-              rco.id = id;
+          // add sources and events
+          let layersOnMap = addSourcesEvents(map, data);
+          addLayers(map, data, currentType);
 
-              map.addSource(id + '-source', {
-                'type': 'geojson',
-                'data': rco
-              });
-              map.addLayer({
-                'id': id,
-                'type': 'fill',
-                'source': id + '-source',
-                'paint': {
-                  'fill-opacity': [
-                    'case',
-                    ['boolean', ['feature-state', 'hover'], false],
-                    1,
-                    0.5
-                    ],
-                  'fill-color': colors[i],
-                }
-              });
-              layersOnMap.push(id);
-              map.addLayer({
-                'id': id + '-line',
-                'type': 'line',
-                'source': id + '-source',
-                'paint': {
-                  'line-color': '#444',
-                  'line-width': 1
-                  }
-              });
-
-
-              map.on('click', id, (e) => {
-                selectList(id, data);
-              });
-                 
-              // When the user moves their mouse over the state-fill layer, we'll update the
-              // feature state for the feature under the mouse.
-              map.on('mousemove', id, (e) => {
-                if (e.features.length > 0) {
-                  if (hoveredPolygonId !== null) {
-                    map.setFeatureState(
-                      { source: id + '-source', id: hoveredPolygonId },
-                      { hover: false }
-                    );
-                  }
-                  hoveredPolygonId = e.features[0].id;
-                  map.setFeatureState(
-                    { source: id + '-source', id: hoveredPolygonId },
-                    { hover: true }
-                    );
-                  }
-                });
-                
-                // When the mouse leaves the state-fill layer, update the feature state of the
-                // previously hovered feature.
-                map.on('mouseleave', id, () => {
-
-                  map.setFeatureState(
-                    { source: id + '-source', id: id },
-                    { hover: false }
-                  );
-                  hoveredPolygonId = null;
-                });
-
-              const el = document.createElement('div');
-              const text = document.createTextNode(rco.properties.ORGANIZATION_NAME);
-              el.append(text);
-              el.className = 'label';
-              
-              // Add markers to the map.
-              new mapboxgl.Marker(el)
-              .setLngLat(center.geometry.coordinates)
-              .addTo(map);
+          layersOnMap.forEach(type => {
+            if (type != currentType) {
+              hideLabels(type);
             }
-            i++;
           });
-
+          
           map.addControl(
             new MapboxGeocoder({
               accessToken: mapboxgl.accessToken,
@@ -253,7 +332,8 @@
           map.addControl(new mapboxgl.NavigationControl());
 
           map.on('moveend', () => {
-            const features = map.queryRenderedFeatures({ layers: layersOnMap});
+            console.log(layersOnMap, currentType);
+            const features = map.queryRenderedFeatures({ layers: layersOnMap[currentType] });
              
             if (features) {
               const uniqueFeatures = getUniqueFeatures(features, 'id');
