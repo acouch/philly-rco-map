@@ -1,0 +1,4100 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "1",
+              "ORGANIZATION_NAME": "Girard Estate Neighbors Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.181899,
+                  39.920969
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "2",
+              "ORGANIZATION_NAME": "SoLo/Germantown Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.168806,
+                  40.0239725
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "3",
+              "ORGANIZATION_NAME": "Greater Bustleton Civic League",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.043383,
+                  40.089516
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "4",
+              "ORGANIZATION_NAME": "East Passyunk Crossing Civic Association (EPX)",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1624525,
+                  39.926593
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "5",
+              "ORGANIZATION_NAME": "Seventh Street Community Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.157393,
+                  39.922765999999996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "6",
+              "ORGANIZATION_NAME": "Residents of Shawmont Valley Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.251555,
+                  40.0543205
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "7",
+              "ORGANIZATION_NAME": "Passyunk Square Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1610925,
+                  39.9333125
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "8",
+              "ORGANIZATION_NAME": "Fairmount Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.178712,
+                  39.9690355
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "9",
+              "ORGANIZATION_NAME": "Old City District",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1464445,
+                  39.950159
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "10",
+              "ORGANIZATION_NAME": "Central Delaware Advocacy Group (CDAG)",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.12139350000001,
+                  39.9469075
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "11",
+              "ORGANIZATION_NAME": "Central Roxborough Civic Association (CRCA)",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.214955,
+                  40.030367999999996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "12",
+              "ORGANIZATION_NAME": "East Falls Community Council",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.187241,
+                  40.015202
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "13",
+              "ORGANIZATION_NAME": "Hawthorne Empowerment Coalition",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1634605,
+                  39.9404095
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "14",
+              "ORGANIZATION_NAME": "Pennsport Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.14227500000001,
+                  39.9268165
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "15",
+              "ORGANIZATION_NAME": "South Street Headhouse District",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1520175,
+                  39.9404435
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "16",
+              "ORGANIZATION_NAME": "Asociacion Puertorriquenos En Marcha (APM)",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.148117,
+                  39.988499
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "17",
+              "ORGANIZATION_NAME": "Tacony Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.0423475,
+                  40.023967
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "18",
+              "ORGANIZATION_NAME": "Mayfair Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.04793000000001,
+                  40.0425955
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "19",
+              "ORGANIZATION_NAME": "Holmesburg Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.01958300000001,
+                  40.0345905
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "20",
+              "ORGANIZATION_NAME": "35th Democratic Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.09903800000001,
+                  40.0450165
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "21",
+              "ORGANIZATION_NAME": "Cedar Park Neighbors",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.21942,
+                  39.947644
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "22",
+              "ORGANIZATION_NAME": "Walton Park Civic Assn (WALPAC)",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.001268,
+                  40.0841725
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "23",
+              "ORGANIZATION_NAME": "50th Democratic Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1706345,
+                  40.0735705
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "24",
+              "ORGANIZATION_NAME": "Faith Community Development Corporation (FCDC)",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1701885,
+                  40.03741
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "25",
+              "ORGANIZATION_NAME": "Nueva Esperanza Housing and Economic Development",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.133151,
+                  40.0161285
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "26",
+              "ORGANIZATION_NAME": "Tioga United, Inc.",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1609,
+                  40.005534999999995
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "27",
+              "ORGANIZATION_NAME": "RAH Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.17959350000001,
+                  40.0085745
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "28",
+              "ORGANIZATION_NAME": "Ridge Park Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.226579,
+                  40.03869
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "29",
+              "ORGANIZATION_NAME": "North Penn Community Action Council",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1737335,
+                  39.993303999999995
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "30",
+              "ORGANIZATION_NAME": "Callowhill Neighborhood Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.157029,
+                  39.9596985
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "31",
+              "ORGANIZATION_NAME": "Parkside Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2288345,
+                  39.9755925
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "32",
+              "ORGANIZATION_NAME": "Belmont Alliance Civic Association CDC",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.207179,
+                  39.9674185
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "33",
+              "ORGANIZATION_NAME": "Somerton Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.014333,
+                  40.1164015
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "34",
+              "ORGANIZATION_NAME": "Baynton Hill Neighbors",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1674635,
+                  40.0341705
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "35",
+              "ORGANIZATION_NAME": "Fishtown Neighbors Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.125562,
+                  39.970701
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "36",
+              "ORGANIZATION_NAME": "Powelton Village Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1907185,
+                  39.9585665
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "37",
+              "ORGANIZATION_NAME": "Spruce Hill Community Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2074415,
+                  39.950715
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "38",
+              "ORGANIZATION_NAME": "Eastwick Friends & Neighbors Coalition",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.23692,
+                  39.90184000000001
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "39",
+              "ORGANIZATION_NAME": "East Torresdale Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -74.991915,
+                  40.048867
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "40",
+              "ORGANIZATION_NAME": "South of South Neighborhood Association (SOSNA)",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.178607,
+                  39.942401000000004
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "41",
+              "ORGANIZATION_NAME": "Center City Residents Association (CCRA)",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1751635,
+                  39.9495435
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "42",
+              "ORGANIZATION_NAME": "North East Quality of Life Coalition",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.033185,
+                  40.025659000000005
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "43",
+              "ORGANIZATION_NAME": "27th Republican Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.19956400000001,
+                  39.9474845
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "44",
+              "ORGANIZATION_NAME": "60th Republican Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.22574700000001,
+                  39.956503999999995
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "45",
+              "ORGANIZATION_NAME": "Uptown Entertainment and Development Corporation",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.157236,
+                  39.9910535
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "46",
+              "ORGANIZATION_NAME": "Mantua Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.195185,
+                  39.9661375
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "47",
+              "ORGANIZATION_NAME": "Blue Bell Hill Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1926685,
+                  40.0334145
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "48",
+              "ORGANIZATION_NAME": "East Kensington Neighbors Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1257815,
+                  39.982845999999995
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "49",
+              "ORGANIZATION_NAME": "Mill Creek Advisory Council",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.21820249999999,
+                  39.9659515
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "50",
+              "ORGANIZATION_NAME": "Cedar Point Park Neighborhood Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.21598850000001,
+                  39.949325
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "51",
+              "ORGANIZATION_NAME": "Washington Square West Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.158713,
+                  39.9472345
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "52",
+              "ORGANIZATION_NAME": "Temple Area Property Association (TAPA)",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1560845,
+                  39.9804965
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "53",
+              "ORGANIZATION_NAME": "HACE CDC",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.133065,
+                  39.997772499999996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "54",
+              "ORGANIZATION_NAME": "Bella Vista Neighbors Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.156868,
+                  39.9390705
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "55",
+              "ORGANIZATION_NAME": "13th Democratic Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1608365,
+                  40.018905000000004
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "56",
+              "ORGANIZATION_NAME": "Upper Holmesburg Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.004839,
+                  40.044210500000005
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "57",
+              "ORGANIZATION_NAME": "Lawncrest Community Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.0984765,
+                  40.048207
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "58",
+              "ORGANIZATION_NAME": "Wissahickon Neighbors Civic Association (WNCA)",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2107695,
+                  40.0218285
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "59",
+              "ORGANIZATION_NAME": "South Broad Street Neighborhood Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.16882,
+                  39.927302499999996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "60",
+              "ORGANIZATION_NAME": "Dickinson Square West Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.153718,
+                  39.928717500000005
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "61",
+              "ORGANIZATION_NAME": "Roxborough Development Corporation",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.21951200000001,
+                  40.030727999999996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "62",
+              "ORGANIZATION_NAME": "Washington Avenue Property Owners Association",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1774175,
+                  39.939024
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "63",
+              "ORGANIZATION_NAME": "Woodland Terrace HomeOwners Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.203618,
+                  39.949757500000004
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "64",
+              "ORGANIZATION_NAME": "Chew and Belfield Neighbors Club Incorporated",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.16889,
+                  40.048125999999996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "65",
+              "ORGANIZATION_NAME": "Viola Street Residents Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.208597,
+                  39.9755255
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "66",
+              "ORGANIZATION_NAME": "Overbrook Farms Club",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2504895,
+                  39.986326000000005
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "67",
+              "ORGANIZATION_NAME": "53rd Republican Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.0775145,
+                  40.0465295
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "68",
+              "ORGANIZATION_NAME": "24th Democratic Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.191809,
+                  39.9649215
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "69",
+              "ORGANIZATION_NAME": "Northwood Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.097744,
+                  40.0236255
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "70",
+              "ORGANIZATION_NAME": "West Mount Airy Neighbors, Inc.",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1977395,
+                  40.0468255
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "71",
+              "ORGANIZATION_NAME": "Port Richmond On Patrol & Civic Association (PROPAC)",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.094112,
+                  39.987972
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "72",
+              "ORGANIZATION_NAME": "Wynnefield Residents Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2338505,
+                  39.991269
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "73",
+              "ORGANIZATION_NAME": "West Powelton Saunders Park RCO",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.205489,
+                  39.960158
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "74",
+              "ORGANIZATION_NAME": "1st Ward Republicans",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.150295,
+                  39.9280785
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "75",
+              "ORGANIZATION_NAME": "Friends of Historic FDR Park",
+              "ORG_TYPE_LABEL": "Park"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.180987,
+                  39.904868
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "76",
+              "ORGANIZATION_NAME": "East Point Breeze Neighbors",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.171558,
+                  39.9314545
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "77",
+              "ORGANIZATION_NAME": "Olde Kensington Neighborhood Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.142658,
+                  39.974815
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "78",
+              "ORGANIZATION_NAME": "Packer Park Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.19412700000001,
+                  39.9052695
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "79",
+              "ORGANIZATION_NAME": "Community Action Group",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.173887,
+                  40.00381350000001
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "80",
+              "ORGANIZATION_NAME": "Beech Community Services Incorporated",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.162806,
+                  39.9787265
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "81",
+              "ORGANIZATION_NAME": "Girard Estate Area Residents (GEAR)",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.17989399999999,
+                  39.918966999999995
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "82",
+              "ORGANIZATION_NAME": "Concerned Citizens of Point Breeze",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1792155,
+                  39.9310265
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "83",
+              "ORGANIZATION_NAME": "East Mt. Airy Neighbors",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1809215,
+                  40.058214
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "84",
+              "ORGANIZATION_NAME": "South Philadelphia Communities Civic Association (SPCCA)",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1646405,
+                  39.9137015
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "85",
+              "ORGANIZATION_NAME": "51st Republican Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2227875,
+                  39.939747
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "86",
+              "ORGANIZATION_NAME": "5th Ward Republican RCO",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1457445,
+                  39.9551805
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "87",
+              "ORGANIZATION_NAME": "Spring Garden Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.17028350000001,
+                  39.964809
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "88",
+              "ORGANIZATION_NAME": "Philadelphia Chinatown Development Corporation",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.15552,
+                  39.957077999999996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "89",
+              "ORGANIZATION_NAME": "Village of Arts and Humanities",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.148382,
+                  39.992525
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "90",
+              "ORGANIZATION_NAME": "Wakefield 49ers Community Development and Improvement Association",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1625315,
+                  40.030212
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "91",
+              "ORGANIZATION_NAME": "Grays Ferry Community Council",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.198722,
+                  39.931886500000005
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "92",
+              "ORGANIZATION_NAME": "Francisville Neighborhood Development Corporation",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.16539449999999,
+                  39.96996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "93",
+              "ORGANIZATION_NAME": "Holme Circle Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.0264085,
+                  40.0570665
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "94",
+              "ORGANIZATION_NAME": "Fox Chase Homeowners Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.07605849999999,
+                  40.077589
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "95",
+              "ORGANIZATION_NAME": "Empowered Community Development Corporation",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.22918250000001,
+                  39.9285505
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "96",
+              "ORGANIZATION_NAME": "Society Hill Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.146172,
+                  39.945188
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "97",
+              "ORGANIZATION_NAME": "Strawberry Mansion Community Development Corporation",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.17613,
+                  39.988831000000005
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "98",
+              "ORGANIZATION_NAME": "Wynnefield Heights Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.20815,
+                  40.0019075
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "99",
+              "ORGANIZATION_NAME": "28th Democratic Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1790165,
+                  39.9936285
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "100",
+              "ORGANIZATION_NAME": "All In The Family Group Associates Incorporated",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.167805,
+                  39.991440499999996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "101",
+              "ORGANIZATION_NAME": "Northern Liberties Neighbors Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1383385,
+                  39.9630795
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "102",
+              "ORGANIZATION_NAME": "Neighbors of Overbrook Association (NOAH)",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.250407,
+                  39.9777335
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "103",
+              "ORGANIZATION_NAME": "Olde Richmond Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1168695,
+                  39.976853500000004
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "104",
+              "ORGANIZATION_NAME": "Friends of Ogden Park",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.16542100000001,
+                  39.969989999999996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "105",
+              "ORGANIZATION_NAME": "53rd Democratic Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.0775145,
+                  40.0465295
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "106",
+              "ORGANIZATION_NAME": "Nicetown-Tioga Improvement Team",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1494175,
+                  40.009007499999996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "107",
+              "ORGANIZATION_NAME": "Brewerytown Sharswood Community Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1778655,
+                  39.9780185
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "108",
+              "ORGANIZATION_NAME": "Millbrook Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -74.97021000000001,
+                  40.080768500000005
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "109",
+              "ORGANIZATION_NAME": "10th Democratic Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.155103,
+                  40.060956
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "110",
+              "ORGANIZATION_NAME": "Progressive Communities CDC",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2432565,
+                  39.9530855
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "111",
+              "ORGANIZATION_NAME": "Eastwick Community Network",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2296865,
+                  39.9010745
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "112",
+              "ORGANIZATION_NAME": "Wissahickon Interested Citizens Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.20365050000001,
+                  40.0204945
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "113",
+              "ORGANIZATION_NAME": "Upper Roxborough Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2385535,
+                  40.0662545
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "114",
+              "ORGANIZATION_NAME": "Whitman Council Incorporated",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.14576349999999,
+                  39.90915
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "115",
+              "ORGANIZATION_NAME": "West Passyunk Neighbors Association (WPNA)",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.182234,
+                  39.925574499999996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "116",
+              "ORGANIZATION_NAME": "Burholme Community Town Watch and Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.07833099999999,
+                  40.0608965
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "117",
+              "ORGANIZATION_NAME": "Overbrook Park Civic Association",
+              "ORG_TYPE_LABEL": "Park"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.267628,
+                  39.9748895
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "118",
+              "ORGANIZATION_NAME": "A Concerned Community Association (ACCA)",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.15119250000001,
+                  40.042897999999994
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "119",
+              "ORGANIZATION_NAME": "24th Ward Republican RCO",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1917865,
+                  39.964927
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "120",
+              "ORGANIZATION_NAME": "ACHIEVEability",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2354265,
+                  39.956882
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "121",
+              "ORGANIZATION_NAME": "Southwest Philadelphia District Services (SWPDS)",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.21637150000001,
+                  39.9410665
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "122",
+              "ORGANIZATION_NAME": "Chestnut Hill Conservancy",
+              "ORG_TYPE_LABEL": "Park"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2130895,
+                  40.0717935
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "123",
+              "ORGANIZATION_NAME": "Oak Lane Community Action Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.134624,
+                  40.054514499999996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "124",
+              "ORGANIZATION_NAME": "South Kensington Community Partners",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.140028,
+                  39.974498
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "125",
+              "ORGANIZATION_NAME": "Impact Community Development Corporation",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.112541,
+                  39.994719
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "126",
+              "ORGANIZATION_NAME": "Residents Organized for Advocacy and Direction",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1877575,
+                  39.9382095
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "127",
+              "ORGANIZATION_NAME": "42nd Democratic Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.118668,
+                  40.024308
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "128",
+              "ORGANIZATION_NAME": "Garden Court Community Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.21947499999999,
+                  39.9521
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "129",
+              "ORGANIZATION_NAME": "Rhawnhurst Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.0572935,
+                  40.061557
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "130",
+              "ORGANIZATION_NAME": "Friends of the Wissahickon",
+              "ORG_TYPE_LABEL": "Park"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2080015,
+                  40.0494905
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "131",
+              "ORGANIZATION_NAME": "Friends of Clark Park",
+              "ORG_TYPE_LABEL": "Park"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2104285,
+                  39.9474615
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "132",
+              "ORGANIZATION_NAME": "Frankford CDC",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.086909,
+                  40.017891
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "133",
+              "ORGANIZATION_NAME": "26th Republican Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1924925,
+                  39.901647999999994
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "134",
+              "ORGANIZATION_NAME": "Oxford Circle Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.076719,
+                  40.041123999999996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "135",
+              "ORGANIZATION_NAME": "Asian American Federation of the United States",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.157558,
+                  39.9573285
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "136",
+              "ORGANIZATION_NAME": "Lancaster Avenue 21st Century Business Association",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.201186,
+                  39.963203500000006
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "137",
+              "ORGANIZATION_NAME": "40th Ward Republicans",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.229642,
+                  39.9025945
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "138",
+              "ORGANIZATION_NAME": "People's Emergency Center Community Development Corporation",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.20225049999999,
+                  39.96435099999999
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "139",
+              "ORGANIZATION_NAME": "Chestnut Hill Community Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2111055,
+                  40.0716825
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "140",
+              "ORGANIZATION_NAME": "Kingsessing Area Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2174935,
+                  39.942749500000005
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "141",
+              "ORGANIZATION_NAME": "Manayunk Neighborhood Council",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.22180449999999,
+                  40.0246035
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "142",
+              "ORGANIZATION_NAME": "Logan Square Neighborhood Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.172356,
+                  39.958659499999996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "143",
+              "ORGANIZATION_NAME": "Nicetown CDC",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.154302,
+                  40.0204305
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "144",
+              "ORGANIZATION_NAME": "12th and Cambria Advisory Board",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.145725,
+                  40.000692
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "145",
+              "ORGANIZATION_NAME": "City Avenue Special Services District of Philadelphia and Lower Merion",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.227125,
+                  39.997909500000006
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "146",
+              "ORGANIZATION_NAME": "Queen Village Neighbors Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.14478249999999,
+                  39.937542
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "147",
+              "ORGANIZATION_NAME": "44th Democratic Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.22317749999999,
+                  39.9689135
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "148",
+              "ORGANIZATION_NAME": "West Central Germantown Neighbors",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.181301,
+                  40.0365525
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "149",
+              "ORGANIZATION_NAME": "Take Back Your Neighborhood",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.071687,
+                  40.0441795
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "150",
+              "ORGANIZATION_NAME": "Yorktown Community Development Corporation",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1552235,
+                  39.9746475
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "151",
+              "ORGANIZATION_NAME": "Franklin Bridge North Neighbors Inc",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1451175,
+                  39.9559105
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "152",
+              "ORGANIZATION_NAME": "Parkwood Area Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -74.97778,
+                  40.103908000000004
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "153",
+              "ORGANIZATION_NAME": "Penn Knox Neighborhood Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.17235199999999,
+                  40.031132
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "154",
+              "ORGANIZATION_NAME": "40th Democratic Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.229642,
+                  39.9025945
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "155",
+              "ORGANIZATION_NAME": "37th Ward Executive Democratic Committee",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.148078,
+                  39.993773000000004
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "156",
+              "ORGANIZATION_NAME": "Bridesburg Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.071924,
+                  39.9943895
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "157",
+              "ORGANIZATION_NAME": "South Street West Improvement District, Inc",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.176101,
+                  39.944937499999995
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "158",
+              "ORGANIZATION_NAME": "13th Republican Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1608365,
+                  40.018905000000004
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "159",
+              "ORGANIZATION_NAME": "Northeast Community Civic Alliance",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.0010715,
+                  40.0758265
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "160",
+              "ORGANIZATION_NAME": "Wissinoming Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.0629525,
+                  40.01353
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "161",
+              "ORGANIZATION_NAME": "3rd Ward Republicans",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2407015,
+                  39.948578499999996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "162",
+              "ORGANIZATION_NAME": "32nd Democratic Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1724705,
+                  39.984902500000004
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "163",
+              "ORGANIZATION_NAME": "Normandy Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.000873,
+                  40.09708
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "164",
+              "ORGANIZATION_NAME": "44th Ward Republican",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.22317749999999,
+                  39.9689135
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "165",
+              "ORGANIZATION_NAME": "46th Republican Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.225079,
+                  39.9497495
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "166",
+              "ORGANIZATION_NAME": "52nd Democratic Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2203505,
+                  39.9921595
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "167",
+              "ORGANIZATION_NAME": "Swampoodle Neighborhood Parcels Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1710285,
+                  40.0064595
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "168",
+              "ORGANIZATION_NAME": "Lower Moyamensing Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.16473450000001,
+                  39.919838
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "169",
+              "ORGANIZATION_NAME": "Hestonville Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.23027450000001,
+                  39.9769595
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "170",
+              "ORGANIZATION_NAME": "Cliveden Hills Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.17123050000001,
+                  40.057791
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "171",
+              "ORGANIZATION_NAME": "Port Richmond Industrial Development Enterprise (PRIDE)",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.102383,
+                  39.994341500000004
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "172",
+              "ORGANIZATION_NAME": "Logan Community Enterprise Center, Inc.",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.14054300000001,
+                  40.0292775
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "173",
+              "ORGANIZATION_NAME": "34th Ward Republican Committee",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2587745,
+                  39.97627
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "174",
+              "ORGANIZATION_NAME": "Veterans Stadium Neighbors Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.15289250000001,
+                  39.896376000000004
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "175",
+              "ORGANIZATION_NAME": "16th Republican Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.16568749999999,
+                  39.9911685
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "176",
+              "ORGANIZATION_NAME": "Awbury Arboretum Neighbors",
+              "ORG_TYPE_LABEL": "Park"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1660775,
+                  40.052265
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "177",
+              "ORGANIZATION_NAME": "14th Ward Democratic Executive Committee",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1537355,
+                  39.967959
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "178",
+              "ORGANIZATION_NAME": "West Belmont Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.207173,
+                  39.96739650000001
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "179",
+              "ORGANIZATION_NAME": "Walnut Hill Community Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.218523,
+                  39.9564485
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "180",
+              "ORGANIZATION_NAME": "35th Ward GOP Committee",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.0990395,
+                  40.0448875
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "181",
+              "ORGANIZATION_NAME": "Harrowgate Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.101077,
+                  39.996612999999996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "182",
+              "ORGANIZATION_NAME": "East Falls Forward",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1876865,
+                  40.018840499999996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "183",
+              "ORGANIZATION_NAME": "Somerset Neighbors for Better Living",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1171405,
+                  39.988330500000004
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "184",
+              "ORGANIZATION_NAME": "HMC Squared Community Association, INC",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.238337,
+                  39.9687015
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "185",
+              "ORGANIZATION_NAME": "Arbours at Eagle Pointe Community Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -74.992749,
+                  40.1169205
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "186",
+              "ORGANIZATION_NAME": "Cobbs Creek Neighbors Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2382595,
+                  39.9531225
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "187",
+              "ORGANIZATION_NAME": "West Torresdale/Morrell Park Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -74.9942235,
+                  40.071047500000006
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "188",
+              "ORGANIZATION_NAME": "59th Democratic Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.174343,
+                  40.0431635
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "189",
+              "ORGANIZATION_NAME": "Center City Organized for Responsible Development",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1536565,
+                  39.953778
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "190",
+              "ORGANIZATION_NAME": "Overbrook West Neighbors, Inc.",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.24060800000001,
+                  39.980761
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "191",
+              "ORGANIZATION_NAME": "West Philly Plan + Preserve",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.212193,
+                  39.949749
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "192",
+              "ORGANIZATION_NAME": "St. Elizabeth's RCO",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1705585,
+                  39.9812745
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "193",
+              "ORGANIZATION_NAME": "Bridesburg Community Action Alliance",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.07581400000001,
+                  39.9945575
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "194",
+              "ORGANIZATION_NAME": "Celestial Community Development Corporation",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.17759799999999,
+                  39.976775
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "195",
+              "ORGANIZATION_NAME": "Concerned Neighbors for Change",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1543145,
+                  40.052852
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "196",
+              "ORGANIZATION_NAME": "Centennial Parkside Community Development Corporation",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.20461449999999,
+                  39.974410500000005
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "197",
+              "ORGANIZATION_NAME": "Parkside Area Community Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.209474,
+                  39.9698775
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "198",
+              "ORGANIZATION_NAME": "Kensington Independent Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1128245,
+                  39.9993085
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "199",
+              "ORGANIZATION_NAME": "Cathedral Park Community Development Association",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.219866,
+                  39.973665499999996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "200",
+              "ORGANIZATION_NAME": "Central Manayunk Council",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2195425,
+                  40.024275
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "201",
+              "ORGANIZATION_NAME": "Broad Street West Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.174084,
+                  39.9191015
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "202",
+              "ORGANIZATION_NAME": "Hunting Park Connected",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.148372,
+                  40.015467
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "203",
+              "ORGANIZATION_NAME": "7th Ward Civic Association",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.12491750000001,
+                  40.0047365
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "204",
+              "ORGANIZATION_NAME": "Logan Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.14506750000001,
+                  40.03102749999999
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "205",
+              "ORGANIZATION_NAME": "4th Democratic Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.234222,
+                  39.971216
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "206",
+              "ORGANIZATION_NAME": "Paschall Betterment League, Inc",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.23692,
+                  39.9111805
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "207",
+              "ORGANIZATION_NAME": "Friends of Penrose",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1874605,
+                  39.9136515
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "208",
+              "ORGANIZATION_NAME": "49th Ward GOP",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.140067,
+                  40.0357875
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "209",
+              "ORGANIZATION_NAME": "Upper North Coalition of Community Councils",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1207645,
+                  40.0482235
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "210",
+              "ORGANIZATION_NAME": "Zulu Nation RCO",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.141625,
+                  39.9861255
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "211",
+              "ORGANIZATION_NAME": "West Philly Together",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2196495,
+                  39.967718000000005
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "212",
+              "ORGANIZATION_NAME": "Mayfair Business Improvement District (BID)",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.04777200000001,
+                  40.033288
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "213",
+              "ORGANIZATION_NAME": "Mt. Airy Business Improvement District",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.189065,
+                  40.055998
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "214",
+              "ORGANIZATION_NAME": "United Francisville Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.16539399999999,
+                  39.96996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "215",
+              "ORGANIZATION_NAME": "South Port Richmond Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.10808800000001,
+                  39.9816895
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "216",
+              "ORGANIZATION_NAME": "Point Breeze Network Plus",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.176718,
+                  39.934902
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "217",
+              "ORGANIZATION_NAME": "Norris Square Community Alliance",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.135111,
+                  39.9855015
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "218",
+              "ORGANIZATION_NAME": "Fitler Square Neighborhood Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.18098,
+                  39.949785000000006
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "219",
+              "ORGANIZATION_NAME": "Point Breeze Community Development Coalition",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1774115,
+                  39.9320875
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "220",
+              "ORGANIZATION_NAME": "Juniata Park Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.103283,
+                  40.0086795
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "221",
+              "ORGANIZATION_NAME": "Community Land Trust Corporation",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1661395,
+                  39.97211
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "222",
+              "ORGANIZATION_NAME": "West Girard Progress",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.14364649999999,
+                  39.972171
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "223",
+              "ORGANIZATION_NAME": "The Good News Community Organization",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.162972,
+                  39.980995
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "224",
+              "ORGANIZATION_NAME": "North of Washington Avenue Coalition",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.179824,
+                  39.9426795
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "225",
+              "ORGANIZATION_NAME": "Earths Keepers Inc",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.21637150000001,
+                  39.9410665
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "226",
+              "ORGANIZATION_NAME": "12th Ward Democratic Committee",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.170333,
+                  40.036141
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "227",
+              "ORGANIZATION_NAME": "Friends of the 47th Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.166289,
+                  39.97634
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "228",
+              "ORGANIZATION_NAME": "22nd Ward Democratic RCO",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1843015,
+                  40.052150999999995
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "229",
+              "ORGANIZATION_NAME": "16th Democratic Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.16568749999999,
+                  39.9911685
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "230",
+              "ORGANIZATION_NAME": "Make it Happen Philly",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.089004,
+                  40.0207085
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "231",
+              "ORGANIZATION_NAME": "Allegheny Empowerment Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.150653,
+                  40.0006465
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "232",
+              "ORGANIZATION_NAME": "3rd Ward Executive Committee",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2407015,
+                  39.948578499999996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "233",
+              "ORGANIZATION_NAME": "46th Ward Democratic Committee",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.225079,
+                  39.9497495
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "234",
+              "ORGANIZATION_NAME": "51st Ward Democratic Executive Committee",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2227875,
+                  39.939747
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "235",
+              "ORGANIZATION_NAME": "Community on the Rise",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.067441,
+                  40.042671999999996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "236",
+              "ORGANIZATION_NAME": "34th Democratic Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2587745,
+                  39.97627
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "237",
+              "ORGANIZATION_NAME": "Tasker-Morris Neighbors Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.20076,
+                  39.930295
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "238",
+              "ORGANIZATION_NAME": "MAP Holistic CDC",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.165965,
+                  39.9786225
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "239",
+              "ORGANIZATION_NAME": "Bigler Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.166382,
+                  39.913070000000005
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "240",
+              "ORGANIZATION_NAME": "West Philadelphia Economic Development Council",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.217954,
+                  39.9531555
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "241",
+              "ORGANIZATION_NAME": "Holly Street Neighbors CDC",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.20711399999999,
+                  39.9678315
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "242",
+              "ORGANIZATION_NAME": "East Parkside Residential Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.20600999999999,
+                  39.9744345
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "243",
+              "ORGANIZATION_NAME": "45th Democratic Ward",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.0830625,
+                  39.993888999999996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "244",
+              "ORGANIZATION_NAME": "Winchester Park Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.0315635,
+                  40.053932
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "245",
+              "ORGANIZATION_NAME": "Fishtown Kensington Area Business Improvement District",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1301325,
+                  39.9751495
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "246",
+              "ORGANIZATION_NAME": "Kensington Neighborhood Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.122129,
+                  39.9941965
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "247",
+              "ORGANIZATION_NAME": "Upper North Neighbors Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.15947249999999,
+                  40.002027
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "248",
+              "ORGANIZATION_NAME": "West Chelten Neighbors Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.182556,
+                  40.03019
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "249",
+              "ORGANIZATION_NAME": "Philly Thrive (SWPDC)",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2045525,
+                  39.9304655
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "250",
+              "ORGANIZATION_NAME": "21st Ward Democratic Committee",
+              "ORG_TYPE_LABEL": "Ward"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2230885,
+                  40.0493955
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "251",
+              "ORGANIZATION_NAME": "Jayhawks Community Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.22428550000001,
+                  39.9358465
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "252",
+              "ORGANIZATION_NAME": "Drexel Area Property Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.19976750000001,
+                  39.957260500000004
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "253",
+              "ORGANIZATION_NAME": "New Kensington Community Development Corp",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1091375,
+                  39.981911
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "254",
+              "ORGANIZATION_NAME": "Foxx Lane RCO",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.18912399999999,
+                  40.0233205
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "255",
+              "ORGANIZATION_NAME": "Wynnefield Community Neighborhood Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.23405249999999,
+                  39.99094650000001
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "256",
+              "ORGANIZATION_NAME": "Mechanicsville Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -74.966801,
+                  40.106437
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "257",
+              "ORGANIZATION_NAME": "Philadelphia Chinese Chamber of Commerce",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.0763375,
+                  40.0493165
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "258",
+              "ORGANIZATION_NAME": "Original Morrocco's of Francisville inc.",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.16539449999999,
+                  39.96996
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "259",
+              "ORGANIZATION_NAME": "Strawberry Mansion Community Concern",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1724705,
+                  39.9887905
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "260",
+              "ORGANIZATION_NAME": "North Central Philadelphia Susquehanna Community Development Corporation",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1580635,
+                  39.997458
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "261",
+              "ORGANIZATION_NAME": "Allegheny West Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.16190850000001,
+                  40.001825499999995
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "262",
+              "ORGANIZATION_NAME": "United Neighbors Alliance Civic Association",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.166289,
+                  39.97634
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "263",
+              "ORGANIZATION_NAME": "Washington Avenue Association of Businesses and Residents",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.16551749999999,
+                  39.9355775
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "264",
+              "ORGANIZATION_NAME": "Wissinoming Neighborhood Affirmative Action Group",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.0564865,
+                  40.013608500000004
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "265",
+              "ORGANIZATION_NAME": "Norris Square Community Action Network-NSCAN",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.135793,
+                  39.983646
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "266",
+              "ORGANIZATION_NAME": "Greenhill Farms Civic Assn.",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2622205,
+                  39.9816285
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "267",
+              "ORGANIZATION_NAME": "The Generationals  of Philadelphia - Cobbs Creek",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.236286,
+                  39.9531225
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "268",
+              "ORGANIZATION_NAME": "West Philly United Neighbors",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.213205,
+                  39.953894500000004
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "269",
+              "ORGANIZATION_NAME": "Price-Knox Neighbors Assn.",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.17948949999999,
+                  40.033407999999994
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "270",
+              "ORGANIZATION_NAME": "North Central East RCO",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.151389,
+                  39.9813215
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "271",
+              "ORGANIZATION_NAME": "Eastwick United CDC",
+              "ORG_TYPE_LABEL": "Development"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.2279075,
+                  39.902948
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "272",
+              "ORGANIZATION_NAME": "ACANA CDC- United Southwest Neighbors",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.23172149999999,
+                  39.930365
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "OBJECTID": "273",
+              "ORGANIZATION_NAME": "Oak Lane/Wister Community Coalition",
+              "ORG_TYPE_LABEL": "Community Organization"
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -75.1504395,
+                  40.0389295
+              ]
+          }
+      }
+  ]
+}

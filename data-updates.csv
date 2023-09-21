@@ -247,8 +247,8 @@ OBJECTID,ORG_TYPE,ORGANIZATION_NAME,ORG_TYPE_LABEL,ORG_WEBSITE
 246,Other,Kensington Neighborhood Association,Community Organization,
 247,Other,Upper North Neighbors Association,Community Organization,
 248,Other,West Chelten Neighbors Association,Community Organization,
-249,Other,Philly Thrive (SWPDC),Community Organization,
-250,Ward,21st Ward Democratic Committee,Community Organization,
+249,Other,Philly Thrive (SWPDC),Community Organization,https://www.phillythrive.org/
+250,Ward,21st Ward Democratic Committee,Ward,
 251,Other,Jayhawks Community Association,Community Organization,
 252,Other,Drexel Area Property Association,Community Organization,
 253,Other,New Kensington Community Development Corp,Development,

@@ -19,28 +19,29 @@
   </head>
   <body>
     <div class="col-lg-12 mx-auto p-4 py-md-5">
-      <main>
-        <h1 class="text-body-emphasis">Philadelphia RCO Map</h1>
-        <p class="fs-5 col-md-8">This is a map of the Registered Philadelphia Community Organizations (RCO). It was created to make it easier to find your local RCO.</p>
-    
-        <hr class="col-3 col-md-2 mb-5">
-    
+      <main>    
         <div class="row g-5">
           <div class="col-md-3">
+            <h1 class="text-body-emphasis">Philly RCO Map</h1>
+            <p>This is a map of Registered Community Organizations (RCO). <a href="#about">About the map ≫</a>.</p>
+            <hr/>
+    
             <h2 class="text-body-emphasis">Organizations</h2>
-            <h3>Selected</h3>
             <ul id="selected-orgs"></ul>
             <button id="clear-selected" style="visibility: hidden">clear selected</button>
-            <h3>Full list</h3>
             <ul id="window-orgs"></ul>
           </div>
     
           <div class="col-md-9">
-            <h2 class="text-body-emphasis">Map</h2>
+            <h2 hidden>Map</h2>
             <p><div id="layer-toggle"></div></p>
             <div id="map"></div>
             <div id="labels"></div>
           </div>
+        </div>
+        <div class="row g-5">
+          <h3 id="about">About</h3>
+          <p>This was created to make it easier to find your local RCO.</p>  
         </div>
       </main>
       <footer class="pt-5 my-5 text-body-secondary border-top">
@@ -49,17 +50,18 @@
     <script>
       const lat = '39.95278';
       const lon = '-75.16361';
-      const geo_file = './Zoning_RCO-6p.geojson';
+      const geo_file = './data.geojson';
+      const labels_file = './labels.geojson';
 
       let store = [];
-      let currentType = "Other";
+      let currentType = "Community Organization";
 
       const clearButton = document.getElementById('clear-selected');
       clearButton.addEventListener("click", function(e) {
         emptyStore();
       }, false);
 
-      function addLayerToggle(types, map, data) {
+      function addLayerToggle(types, map, data, label_data) {
         let div = document.getElementById("layer-toggle");
 
         types.forEach(type => {
@@ -68,13 +70,9 @@
           div.appendChild(button);
           button.addEventListener("click", function(e) {
             removeLayers(map, data, type);
+            removeLabels(map);
             addLayers(map, data, type);
-            const typesToHide = types.filter(function(t){ return t != type});
-            console.log(typesToHide);
-            typesToHide.forEach(toHide => {
-              hideLabels(toHide);
-            })
-            showLabels(type);
+            addLabels(map, label_data, type);
             currentType = type;
           }, false);
         });
@@ -142,7 +140,7 @@
       }
 
       function toggleTemplate(type) {
-        return `<button id="button-${type}">${type}</button>`;
+        return `<button data-toggle="button" aria-pressed="false" class="btn btn-outline-dark" type="button" id="button-${type}">${type}</button>`;
       }
 
       function removeFromList(id) {
@@ -167,20 +165,18 @@
         return uniqueFeatures;
       }
     
-      function addSourcesEvents(map, data) {
+      function addSourcesEvents(map, data, label_data) {
         let hoveredPolygonId = null;
-        const types = [];
         let layersOnMap = [];
+        let labels = {
+          'type': 'FeatureCollection',
+          'features': []
+        };
 
         data.features.forEach(rco => {
           let id = String(rco.properties.OBJECTID);
-          let type = String(rco.properties.ORG_TYPE);
-
-          const center = turf.center(rco.geometry);
+          let type = String(rco.properties.ORG_TYPE_LABEL);
           rco.id = id;
-          if (types.indexOf(type) == -1) {
-            types.push(type);
-          }
           if (type in layersOnMap) {
             layersOnMap[type].push(id);
           }
@@ -223,17 +219,8 @@
             );
             hoveredPolygonId = null;
           });
-                      
-          // Add markers to the map.
-          const el = document.createElement('div');
-          const text = document.createTextNode(rco.properties.ORGANIZATION_NAME);
-          el.append(text);
-          el.className = 'label-' + type;
-          new mapboxgl.Marker(el)
-            .setLngLat(center.geometry.coordinates)
-            .addTo(map);     
         });
-        addLayerToggle(types, map, data);
+        addLayerToggle(Object.keys(layersOnMap), map, data, label_data);
         return layersOnMap;
       }
 
@@ -256,7 +243,7 @@
         let i = 0;
 
         data.features.forEach(rco => {
-          if (rco.properties.ORG_TYPE == type) {
+          if (rco.properties.ORG_TYPE_LABEL == type) {
             let id = String(rco.properties.OBJECTID);
             const center = turf.center(rco.geometry);
             rco.id = id;
@@ -288,9 +275,29 @@
         });
       }
 
+      function removeLabels(map) {
+        map.removeLayer('all-labels');
+      }
+      function addLabels(map, label_data, type) {
+          map.addLayer({
+            'id': 'all-labels',
+            'type': 'symbol',
+            'source': 'labels',
+            'layout': {
+              'text-size': 12,
+              'text-field': ['get', 'ORGANIZATION_NAME'],
+              'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+              'text-radial-offset': 0.5,
+              'text-justify': 'auto',
+              'icon-image': ['get', 'icon']
+            },
+            'filter': ['==', 'ORG_TYPE_LABEL', type]
+        });
+      }
+
       function removeLayers(map, data, type) {
         data.features.forEach(rco => {
-          if (rco.properties.ORG_TYPE != type) {
+          if (rco.properties.ORG_TYPE_LABEL != type) {
             let id = String(rco.properties.OBJECTID);
             if (map.getLayer(id)) map.removeLayer(id);
             if (map.getLayer(id + '-line')) map.removeLayer(id + '-line');
@@ -303,46 +310,53 @@
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v11',
         center: [lon, lat],
-        zoom: 11
+        zoom: 10
       });
-      fetch(geo_file)
+      fetch(labels_file)
       .then(response => response.json())
-      .then(data => {
-        console.log(data);
+      .then(label_data => {
+        fetch(geo_file)
+        .then(response => response.json())
+        .then(data => {
 
-        map.on('load', () => {
+          map.on('load', () => {
 
-          // add sources and events
-          let layersOnMap = addSourcesEvents(map, data);
-          addLayers(map, data, currentType);
+            // add sources and events
+            let layersOnMap = addSourcesEvents(map, data, label_data);
+            addLayers(map, data, currentType);
+            map.addSource('labels', {
+              'type': 'geojson',
+              'data': label_data
+            });
+            addLabels(map, label_data, currentType);
+            Object.keys(layersOnMap).forEach(type => {
+              console.log(type)
+              if (type != currentType) {
+                hideLabels(type);
+              }
+            });
+            
+            map.addControl(
+              new MapboxGeocoder({
+                accessToken: mapboxgl.accessToken,
+                mapboxgl: mapboxgl
+              })
+            );
 
-          layersOnMap.forEach(type => {
-            if (type != currentType) {
-              hideLabels(type);
-            }
+            map.addControl(new mapboxgl.NavigationControl());
+
+            map.on('moveend', () => {
+              console.log(layersOnMap, currentType);
+              const features = map.queryRenderedFeatures({ layers: layersOnMap[currentType] });
+              
+              if (features) {
+                const uniqueFeatures = getUniqueFeatures(features, 'id');
+                renderListings(uniqueFeatures);
+              }
+            });
           });
-          
-          map.addControl(
-            new MapboxGeocoder({
-              accessToken: mapboxgl.accessToken,
-              mapboxgl: mapboxgl
-            })
-          );
-
-          map.addControl(new mapboxgl.NavigationControl());
-
-          map.on('moveend', () => {
-            console.log(layersOnMap, currentType);
-            const features = map.queryRenderedFeatures({ layers: layersOnMap[currentType] });
-             
-            if (features) {
-              const uniqueFeatures = getUniqueFeatures(features, 'id');
-              renderListings(uniqueFeatures);
-            }
-          });
-        });
+        });        
       });
-   
     </script>
   </body>
 </html>

@@ -1,4 +1,7 @@
 #map {
-  height: 800px;
+  height: 600px;
   width: 100%;
+}
+#layer-toggle button {
+  margin-right: .8em;
 }
