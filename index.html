@@ -160,7 +160,7 @@
       }
 
       function getOrgPropertyFromData(id, data) {
-        const org = data.features.filter(rco => rco.properties.OBJECTID == id);
+        const org = data.filter(rco => rco.properties.OBJECTID == id);
         return org[0].properties;
       }
 
@@ -185,7 +185,7 @@
           'features': []
         };
 
-        data.features.forEach(rco => {
+        data.forEach(rco => {
           let id = String(rco.properties.OBJECTID);
           let type = String(rco.properties.ORG_TYPE_LABEL);
           rco.id = id;
@@ -253,7 +253,7 @@
       function addLayers(map, data, type) {
         let i = 0;
 
-        data.features.forEach(rco => {
+        data.forEach(rco => {
           if (rco.properties.ORG_TYPE_LABEL == type) {
             let id = String(rco.properties.OBJECTID);
             rco.id = id;
@@ -317,7 +317,7 @@
       }
 
       function removeLayers(map, data, type) {
-        data.features.forEach(rco => {
+        data.forEach(rco => {
           if (rco.properties.ORG_TYPE_LABEL != type) {
             let id = String(rco.properties.OBJECTID);
             if (map.getLayer(id)) map.removeLayer(id);
@@ -339,9 +339,14 @@
         fetch(geo_file)
         .then(response => response.json())
         .then(unsorted => {
-          const data = {
-            features: unsorted.features.sort((a, b) => a.properties.ORGANIZATION_NAME > b.properties.ORGANIZATION_NAME )
-          };
+          const data = unsorted.features.sort((a, b) => { 
+            if (a.properties.ORGANIZATION_NAME < b.properties.ORGANIZATION_NAME) {
+              return -1
+            }
+            else {
+              return 1
+            }
+          });
 
           map.on('load', () => {
             // add sources and events
@@ -352,12 +357,8 @@
               'data': label_data
             });
             addLabels(map, label_data, currentType);
-            Object.keys(layersOnMap).forEach(type => {
-              if (type != currentType) {
-                hideLabels(type);
-              }
-            });
-            const initialOrgData = data.features.filter(org => {
+
+            const initialOrgData = data.filter(org => {
               const id = String(org.properties.OBJECTID);
               const index = layersOnMap[currentType].indexOf(id);
               if (index === -1) {
@@ -367,6 +368,7 @@
             });
             const initialOrgs = initialOrgData.map(org => org.properties);
             addToList(initialOrgs, "window-orgs");
+            
             map.addControl(
               new MapboxGeocoder({
                 accessToken: mapboxgl.accessToken,
