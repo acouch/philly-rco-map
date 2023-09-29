@@ -5,3 +5,25 @@
 #layer-toggle button {
   margin-right: .8em;
 }
+.org-entry {
+  margin: 10px 0;
+}
+
+.pr-0 {
+  padding-right: 0 !important;
+}
+h5 {
+  font-size: 1em;
+}
+.geocoder {
+  position: absolute;
+  z-index: 1;
+  width: 50%;
+  left: 50%;
+  margin-left: -25%;
+  top: 10px;
+}
+.mapboxgl-ctrl-geocoder {
+  min-width: 100%;
+}
+ 

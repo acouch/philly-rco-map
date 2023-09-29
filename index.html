@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Philadelphia RCO Map</title>
-    <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
@@ -15,33 +14,32 @@
     <script src="./colors.js"></script>
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
- 
+    <link rel="stylesheet" href="./style.css">
+
   </head>
   <body>
     <div class="col-lg-12 mx-auto p-4 py-md-5">
-      <main>    
+      <main>
         <div class="row g-5">
-          <div class="col-md-4">
+          <div class="col-md-5 pr-0">
             <h1 class="text-body-emphasis">Philly RCO Map</h1>
             <p>This is a map of Registered Community Organizations (RCO). <a href="#about">About the map ≫</a>.</p>
             <hr/>
-    
-            <h2 class="text-body-emphasis">Organizations</h2>
-            <ul id="selected-orgs"></ul>
-            <button id="clear-selected" style="visibility: hidden">clear selected</button>
-            <ul id="window-orgs"></ul>
+            <div id="selected-orgs" class="row"></div>
+            <button id="clear-selected" style="display: none">clear selected</button>
+            <div id="window-orgs" class="row"></div>
           </div>
-    
-          <div class="col-md-8">
+          <div class="col-md-7">
             <h2 hidden>Map</h2>
             <p><div id="layer-toggle"></div></p>
             <div id="map"></div>
+            <div id="geocoder" class="geocoder">geocoder</div>
             <div id="labels"></div>
           </div>
         </div>
         <div class="row g-5">
           <h3 id="about">About</h3>
-          <p>This was created to make it easier to find your local RCO.</p>  
+          <p>This was created to make it easier to find your local RCO.</p>
         </div>
       </main>
       <footer class="pt-5 my-5 text-body-secondary border-top">
@@ -63,7 +61,8 @@
 
       function addLayerToggle(layersOnMap, map, data, label_data) {
         let div = document.getElementById("layer-toggle");
-        const types = Object.keys(layersOnMap).sort()
+        const types = Object.keys(layersOnMap).sort();
+        console.log(layersOnMap);
 
         types.forEach(type => {
           let el = toggleTemplate(type);
@@ -73,8 +72,8 @@
           }
           div.appendChild(button);
           button.addEventListener("click", function(e) {
-            const disativeButton = document.getElementsByClassName('btn active');
-            disativeButton[0].classList.remove("active");
+            const disactiveButton = document.getElementsByClassName('btn active');
+            disactiveButton[0].classList.remove("active");
             e.target.classList.add("active")
 
             removeLayers(map, data, type);
@@ -102,7 +101,7 @@
         }
         // add item
         else {
-          clearButton.style.visibility = 'visible';
+          clearButton.style.display = 'block';
           let org = getOrgPropertyFromData(id, data);
           store.push(id);
           addToList([org], "selected-orgs");
@@ -113,7 +112,7 @@
         store = [];
         document.getElementById("selected-orgs").innerHTML = "";
         const button = document.getElementById('clear-selected');
-        button.style.visibility = 'hidden';
+        button.style.display = 'none';
       }
 
       function renderListings(features) {
@@ -129,15 +128,15 @@
       function addToList(orgs, identifier) {
         let ul = document.getElementById(identifier);
         for (i in orgs) {
-          
+
           let el = listTemplate(orgs[i]);
-          let li = htmlCreate('li', el);
+          let li = htmlCreate('div', el);
           ul.appendChild(li);
         }
       }
 
       function htmlCreate (type, html) {
-        const el = document.createElement(type);  
+        const el = document.createElement(type);
         let item;
         el.innerHTML = html;
         item = el.firstChild;
@@ -147,7 +146,13 @@
 
       function listTemplate(org) {
         const name = org.ORGANIZATION_NAME;
-        return `<li id="org-${org.OBJECTID}" class="org-entry">${name}</li>`
+        return `<div id="org-${org.OBJECTID}" class="col-sm-6 org-entry">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">${org.ORGANIZATION_NAME}</h5>
+                <a href="#" class="btn btn-secondary">more info</a>
+            </div>
+          </div></div>`
       }
 
       function toggleTemplate(type) {
@@ -156,7 +161,7 @@
 
       function removeFromList(id) {
         const element = document.getElementById(id);
-        element.remove(); 
+        element.remove();
       }
 
       function getOrgPropertyFromData(id, data) {
@@ -176,7 +181,7 @@
         }
         return uniqueFeatures;
       }
-    
+
       function addSourcesEvents(map, data, label_data) {
         let hoveredPolygonId = null;
         let layersOnMap = [];
@@ -220,7 +225,7 @@
                 );
               }
             });
-              
+
           // When the mouse leaves the state-fill layer, update the feature state of the
           // previously hovered feature.
           map.on('mouseleave', id, () => {
@@ -239,14 +244,14 @@
       function hideLabels(type) {
         labels = document.getElementsByClassName('label-' + type);
         for(var i = 0; i < labels.length; i++){
-          labels[i].style.visibility = "hidden";
+          labels[i].style.display = "none";
         }
       }
 
       function showLabels(type) {
         labels = document.getElementsByClassName('label-' + type);
         for(var i = 0; i < labels.length; i++){
-          labels[i].style.visibility = 'visible';
+          labels[i].style.display = 'none';
         }
       }
 
@@ -310,7 +315,7 @@
         const features = map.queryRenderedFeatures({ layers: layersOnMap[currentType] });
         if (features) {
           const uniqueFeatures = getUniqueFeatures(features, 'id');
-          const sortedFeatures = uniqueFeatures.sort((a, b) => a.properties.ORGANIZATION_NAME > b.properties.ORGANIZATION_NAME );
+          const sortedFeatures = uniqueFeatures.sort((a, b) => a.properties.ORGANIZATION_NAME > b.properties.ORGANIZATION_NAME ? 1 : -1 );
 
           renderListings(sortedFeatures);
         }
@@ -324,7 +329,8 @@
             if (map.getLayer(id + '-line')) map.removeLayer(id + '-line');
           }
         });
-      } 
+      }
+      
       mapboxgl.accessToken = 'pk.eyJ1IjoiYWNvdWNoMSIsImEiOiJDTy0zMFJrIn0.hewU0mOW08Wm5-0-Qr8TpQ';
 
       const map = new mapboxgl.Map({
@@ -333,21 +339,27 @@
         center: [lon, lat],
         zoom: 10
       });
+
+      const geocoder = map.addControl(
+        new MapboxGeocoder({
+          accessToken: mapboxgl.accessToken,
+          mapboxgl: mapboxgl
+        })
+      );
+      console.log(geocoder)
+
+     // document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
+
+      map.addControl(new mapboxgl.NavigationControl());
+      
       fetch(labels_file)
       .then(response => response.json())
       .then(label_data => {
         fetch(geo_file)
         .then(response => response.json())
         .then(unsorted => {
-          const data = unsorted.features.sort((a, b) => { 
-            if (a.properties.ORGANIZATION_NAME < b.properties.ORGANIZATION_NAME) {
-              return -1
-            }
-            else {
-              return 1
-            }
-          });
-
+          const data = unsorted.features.sort((a, b) => a.properties.ORGANIZATION_NAME > b.properties.ORGANIZATION_NAME ? 1 : -1 );
+          
           map.on('load', () => {
             // add sources and events
             let layersOnMap = addSourcesEvents(map, data, label_data);
@@ -368,21 +380,12 @@
             });
             const initialOrgs = initialOrgData.map(org => org.properties);
             addToList(initialOrgs, "window-orgs");
-            
-            map.addControl(
-              new MapboxGeocoder({
-                accessToken: mapboxgl.accessToken,
-                mapboxgl: mapboxgl
-              })
-            );
-
-            map.addControl(new mapboxgl.NavigationControl());
 
             map.on('moveend', () => {
               updateFeaturesForListing(map, layersOnMap)
             });
           });
-        });        
+        });
       });
     </script>
   </body>
