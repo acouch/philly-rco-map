@@ -23,7 +23,7 @@
         <div class="row g-5 reverse">
           <div class="col-md-5 pr-0">
             <h1 class="text-body-emphasis">Philly RCO Map</h1>
-            <p>This is a map of Registered Community Organizations (RCO). <a href="#about">About the map ≫</a>.</p>
+            <p>This is a map of <a href="https://www.phila.gov/programs/registered-community-organizations-rcos/">Registered Community Organizations (RCO)</a>. <a href="#about">About the map ≫</a>.</p>
             <hr/>
             <div id="selected-orgs" class="row"></div>
             <button id="clear-selected" class="btn btn-outline-secondary" style="display: none">clear selected</button>
@@ -34,12 +34,13 @@
             <p><div id="layer-toggle"></div></p>
             <div id="geocoder" class="geocoder"></div>
             <div id="map"></div>
-            <div id="labels"></div>
+            <div class="row">
+              <div class="col-md-12">
+                <h3 id="about">About</h3>
+                <p>This was created to make it easier to find your local RCO. The city publishes a <a href="https://openmaps.phila.gov/">map of RCOs</a>, however it is not as colorful! This map was built with a GeoJSON file <a href="https://opendataphilly.org/datasets/registered-community-organizations-rco-boundaries/">shared on OpenDataPhilly.org</a>, and adds additional information like <a href="https://github.com/acouch/philly-rco-map/blob/main/data-updates.csv">website and mission</a>. The project is <a href="https://github.com/acouch/philly-rco-map">hosted on github</a>.</p>
+                </div>
+            </div>
           </div>
-        </div>
-        <div class="row g-5">
-          <h3 id="about">About</h3>
-          <p>This was created to make it easier to find your local RCO.</p>
         </div>
 
         <div class="modal fade" id="orgModal" tabindex="-1" role="dialog" aria-labelledby="orgModalLabel" aria-hidden="true">
