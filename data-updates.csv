@@ -1,4 +1,4 @@
-OBJECTID,ORG_TYPE,ORGANIZATION_NAME,ORG_TYPE_LABEL,ORG_WEBSITE
+OBJECTID,ORG_TYPE,ORGANIZATION_NAME,ORG_TYPE_LABEL,ORG_WEBSITE, MISSION
 1,Other,Girard Estate Neighbors Association,Community Organization,
 2,Other,SoLo/Germantown Civic Association,Community Organization,
 3,Other,Greater Bustleton Civic League,Community Organization,
@@ -69,7 +69,7 @@ OBJECTID,ORG_TYPE,ORGANIZATION_NAME,ORG_TYPE_LABEL,ORG_WEBSITE
 68,Ward,24th Democratic Ward,Ward,
 69,Other,Northwood Civic Association,Community Organization,
 70,Other,"West Mount Airy Neighbors, Inc.",Community Organization,
-71,Other,Port Richmond On Patrol & Civic Association (PROPAC),Community Organization,
+71,Other,Port Richmond On Patrol & Civic Association (PROPAC),Community Organization,https://www.facebook.com/groups/424289664313424
 72,Other,Wynnefield Residents Association,Community Organization,
 73,Other,West Powelton Saunders Park RCO,Community Organization,
 74,Ward,1st Ward Republicans,Ward,
@@ -118,7 +118,7 @@ OBJECTID,ORG_TYPE,ORGANIZATION_NAME,ORG_TYPE_LABEL,ORG_WEBSITE
 117,Other,Overbrook Park Civic Association,Park,
 118,Other,A Concerned Community Association (ACCA),Community Organization,
 119,Ward,24th Ward Republican RCO,Ward,
-120,Other,ACHIEVEability,Community Organization,
+120,Other,ACHIEVEability,Community Organization,https://achieveability.org, "ACHIEVEability is a nonprofit working to permanently break the generational cycle of poverty for low-income, single parent and homeless families through higher education, affordable housing, supportive services, community and economic development and accountability."
 121,Other,Southwest Philadelphia District Services (SWPDS),Community Organization,
 122,Other,Chestnut Hill Conservancy,Park,
 123,Other,Oak Lane Community Action Association,Community Organization,
