@@ -1,4 +1,4 @@
-OBJECTID,ORG_TYPE,ORGANIZATION_NAME,ORG_TYPE_LABEL,ORG_WEBSITE, MISSION
+OBJECTID,ORG_TYPE,ORGANIZATION_NAME,ORG_TYPE_LABEL,ORG_WEBSITE, MISSION, LOGO_LINK
 1,Other,Girard Estate Neighbors Association,Community Organization,
 2,Other,SoLo/Germantown Civic Association,Community Organization,
 3,Other,Greater Bustleton Civic League,Community Organization,
@@ -68,7 +68,7 @@ OBJECTID,ORG_TYPE,ORGANIZATION_NAME,ORG_TYPE_LABEL,ORG_WEBSITE, MISSION
 67,Ward,53rd Republican Ward,Ward,
 68,Ward,24th Democratic Ward,Ward,
 69,Other,Northwood Civic Association,Community Organization,
-70,Other,"West Mount Airy Neighbors, Inc.",Community Organization,
+70,Other,"West Mount Airy Neighbors, Inc.",Community Organization, https://wman.net/ ,"West Mount Airy Neighbors (WMAN) is a member-supported, nonprofit civic organization whose mission is to support and advocate for the needs and concerns of the West Mount Airy community, nurture our social fabric in all its diversity, and help protect and steward the inevitable transformation of our beloved physical and natural environments.", https://wman.net/wp-content/themes/wman/images/logo.png
 71,Other,Port Richmond On Patrol & Civic Association (PROPAC),Community Organization,https://www.facebook.com/groups/424289664313424
 72,Other,Wynnefield Residents Association,Community Organization,
 73,Other,West Powelton Saunders Park RCO,Community Organization,
