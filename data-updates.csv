@@ -1,8 +1,8 @@
 OBJECTID,ORG_TYPE,ORGANIZATION_NAME,ORG_TYPE_LABEL,ORG_WEBSITE, MISSION, LOGO_LINK
-1,Other,Girard Estate Neighbors Association,Community Organization,,,
-2,Other,SoLo/Germantown Civic Association,Community Organization,,,
-3,Other,Greater Bustleton Civic League,Community Organization,,,
-4,Other,East Passyunk Crossing Civic Association (EPX),Community Organization,,,
+1,Other,Girard Estate Neighbors Association,Community Organization,https://www.girardestateneighbors.org/,"Providing a voice for the community",https://girardestateneighbors.org/wp-content/themes/gena/assets/img/gena-logo.svg
+2,Other,SoLo/Germantown Civic Association,Community Organization,https://www.sologermantown.com/,"Mission:  To  improve the quality of life by encouraging civic involvement, promoting neighborhood activities, and to serve as a resource for residents and  businesses.",https://images.squarespace-cdn.com/content/v1/5aa80df0b98a7807c929fd21/1562337378553-AAVPO9LWPCF02W165RC1/happy+hollow2.jpg?format=original
+3,Other,Greater Bustleton Civic League,Community Organization,https://gbcl.online/,"– All-volunteer group of Bustleton residents acts as a voice for the community when needed on issues such as public safety, zoning, crime & cleanliness. Our mission is to preserve, improve and ensure appropriate development.",
+4,Other,East Passyunk Crossing Civic Association (EPX),Community Organization,https://www.epcrossing.org/,"EPX Civic empowers neighbors to contribute to a vibrant, inclusive community. We provide a forum for, and strive to reach consensus on, zoning and land use issues. We advocate for quality, well-kept public spaces in our neighborhood. We connect residents to resources and to each other.",https://www.epcrossing.org/wp-content/uploads/2023/09/EPX-logo_FNL-1-150x150.jpg
 5,Other,Seventh Street Community Civic Association,Community Organization,,,
 6,Other,Residents of Shawmont Valley Association,Community Organization,,,
 7,Other,Passyunk Square Civic Association,Community Organization,,,
@@ -166,7 +166,7 @@ OBJECTID,ORG_TYPE,ORGANIZATION_NAME,ORG_TYPE_LABEL,ORG_WEBSITE, MISSION, LOGO_LI
 165,Ward,46th Republican Ward,Ward,,,
 166,Ward,52nd Democratic Ward,Ward,,,
 167,Other,Swampoodle Neighborhood Parcels Association,Community Organization,,,
-168,Other,Lower Moyamensing Civic Association,Community Organization,,,
+168,Other,Lower Moyamensing Civic Association,Community Organization,https://lomophilly.org/,"The Lower Moyamensing Civic Association (LoMo) is a community-based, volunteer-driven 501(c)(3) non-profit organization whose mission is to improve the quality of life in our neighborhood.",https://lomophilly.files.wordpress.com/2015/11/lomo_logo_white.png
 169,Other,Hestonville Civic Association,Community Organization,,,
 170,Other,Cliveden Hills Association,Community Organization,,,
 171,SSD,Port Richmond Industrial Development Enterprise (PRIDE),Development,,,
