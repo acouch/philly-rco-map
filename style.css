@@ -80,3 +80,23 @@ h5 {
 .profile-card .icon-block a{
   text-decoration:none;
 }
+.org-logo {
+  max-width: 400px;
+  max-height: 150px;
+  float: right;
+}
+#modal-content {
+  position: relative;
+}
+
+#website {
+  padding: 10px 0 20px 0;
+}
+
+#map-inset {
+  position: absolute;
+  right: 30px;
+  bottom: 100px;
+  height: 300px;
+  width: 700px;
+}

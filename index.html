@@ -38,7 +38,8 @@
               <div class="col-md-12">
                 <h3 id="about">About</h3>
                 <p>This was created to make it easier to find your local RCO. The city publishes a <a href="https://openmaps.phila.gov/">map of RCOs</a>, however it is not as colorful! This map was built with a GeoJSON file <a href="https://opendataphilly.org/datasets/registered-community-organizations-rco-boundaries/">shared on OpenDataPhilly.org</a>, and adds additional information like <a href="https://github.com/acouch/philly-rco-map/blob/main/data-updates.csv">website and mission</a>. The project is <a href="https://github.com/acouch/philly-rco-map">hosted on github</a>.</p>
-                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -46,6 +47,66 @@
         <div class="modal fade" id="orgModal" tabindex="-1" role="dialog" aria-labelledby="orgModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content" id="org-modal-content">
+              <div id="org-modal-content-inner">
+                <div data-modal-id=${org.id}><div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row g-5">
+                    <div class="col-md-4">
+                      <h5>Primary Contact</h5>
+                      <div class="card profile-card">
+                        <div class="card-body pt-8">
+                            <div class="card-img">
+                              <img src="https://acouch.github.io/philly-rco-map/imgs/primary-contact.jpg" alt="profile-image" class="profile"/>
+                            </div>
+                            <h5 class="card-title text-center"></h5>
+                            <p class="card-text">
+                              <strong>Preferred Contact Method</strong>:<br/>
+                              <strong>Primary Phone</strong>:  <br/>
+                              <strong>Primary Email</strong>:  <br/>
+                              <strong>Primary Address</strong>: 
+                            </p>
+                        </div>
+                      </div>
+                      <h5>Alternate Contact</h5>
+                      <div class="card profile-card">
+                        <div class="card-body pt-8">
+                            <div class="card-img">
+                              <img src="https://acouch.github.io/philly-rco-map/imgs/alt-contact.jpg" alt="profile-image" class="profile"/>
+                            </div>
+                            <h5 class="card-title text-center"></h5>
+                            <p class="card-text">
+                              <strong>Preferred Contact Method</strong>: <br/>
+                              <strong>Alternate Phone</strong>:  <br/>
+                              <strong>Alternate Email</strong>:  <br/>
+                              <strong>Alternate Address</strong>: 
+                            </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-7">
+                     
+                      <p>
+                      </p>
+                      <div id="website" class="clear">
+                        
+                      </div>
+                      <p>
+                        <strong>Address:</strong> <br/>
+                        <strong>Meeting Location Address:</strong>  <br/>
+                        <strong>Expiration Year:</strong>   <br/>
+                        <strong>Effective Date:</strong>  <br/>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div></div>`
+              </div>
+              <div id="map-inset"></div>
             </div>
           </div>
         </div>
@@ -64,6 +125,7 @@
       const labels_file = './labels.geojson';
 
       let store = [];
+      let clicked = 0;
       let currentType = "Community Organization";
 
       const clearButton = document.getElementById('clear-selected');
@@ -93,27 +155,61 @@
             addLabels(map, label_data, type);
             currentType = type;
             setTimeout(function() {
-              updateFeaturesForListing(map, layersOnMap)
+              updateFeaturesForListing(map, layersOnMap, data)
             }, 500)
           }, false);
         });
       }
 
-      function modalListener(data) {
-        const buttons = document.getElementsByClassName("org-modal-button");
-        for (i in buttons) {
-          if (typeof buttons[i] == 'object') {
-            const button = buttons[i];
-            const id = button.getAttribute('data-org-id');
-            const modal = document.getElementById("org-modal-content");
+      function modalUpdate(modal, org, id, mapInset) {
+        modal.innerHTML = "";
+        let el = modalTemplate(org.properties);
+        let it = htmlCreate('div', el);
+        modal.appendChild(it);
+        if (!mapInset.getSource(id + '-inset-source')) {
+          mapInset.addSource(id + '-inset-source', {
+            'type': 'geojson',
+            'data': org
+          });
+        }
+        if (!mapInset.getLayer(id + '-inset')) {
+          mapInset.addLayer({
+            'id': id + '-inset',
+            'type': 'fill',
+            'source': id + '-inset-source',
+            'paint': {
+              'fill-opacity': [
+                'case',
+                ['boolean', ['feature-state', 'hover'], false],
+                1,
+                0.5
+                ],
+              'fill-color': org.properties.color,
+            }
+          });
+        }
 
-            button.addEventListener("click", function(e) {
-              modal.innerHTML = "";
-              org = data.filter((org) => org.properties.OBJECTID == id)[0];
-              let el = modalTemplate(org.properties);
-              let it = htmlCreate('div', el);
-              modal.appendChild(it);
-            });
+        mapInset.style.width = "200px";
+        mapInset.resize();
+        console.log("no reset");
+        const bbox = turf.bbox(org.geometry);
+        mapInset.fitBounds(bbox);
+      }
+
+      function modalClickListener(button, modal, data, mapInset) {
+        const id = button.getAttribute('data-org-id');
+        const org = data.filter((org) => org.properties.OBJECTID == id)[0];
+        button.addEventListener("click", modalUpdate(modal, org, id, mapInset));
+      }
+
+      function modalListener(ids, data, mapInset) {
+        const modal = document.getElementById("org-modal-content-inner");
+        for (i in ids) {
+          const id = ids[i];
+          const dButtons = document.querySelectorAll("[data-org-id='" + id + "']");
+          // Only two will be added, so listen on first.
+          if (dButtons[0]) {
+            modalClickListener(dButtons[0], modal, data, mapInset);
           }
         }
       }
@@ -135,7 +231,6 @@
           let org = getOrgPropertyFromData(id, data);
           store.push(id);
           addToList([org], "selected-orgs");
-          modalListener(data);
         }
       }
 
@@ -146,7 +241,7 @@
         button.style.display = 'none';
       }
 
-      function renderListings(features) {
+      function renderListings(features, data) {
         // Clear list, first.
         document.getElementById("window-orgs").innerHTML = "";
         let orgs = [];
@@ -187,7 +282,10 @@
       }
 
       function modalTemplate(org) {
-        return `<div><div class="modal-header">
+        const website = org.ORG_WEBSITE ? `<strong>Website:</strong> <a href="${org.ORG_WEBSITE}">${org.ORG_WEBSITE}</a>` : "";
+        const logo = org.ORG_LOGO ? `<img class="org-logo" src="${org.ORG_LOGO}"/>` : "";
+        const mission = org.ORG_MISSION ? `<h5>About</h5><p>${org.ORG_MISSION}</p>` : "";
+        return `<div data-modal-id=${org.id}><div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">${org.ORGANIZATION_NAME}</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
@@ -226,12 +324,18 @@
               </div>
             </div>
             <div class="col-md-7">
-              <ul>
-                <li><strong>Address:</strong> ${org.ORGANIZATION_ADDRESS}</li>
-                <li><strong>Meeting Location Address:</strong>  ${org.MEETING_LOCATION_ADDRESS}</li>
-                <li><strong>Expiration Year:</strong>   ${org.EXPIRATIONYEAR}</li>
-                <li><strong>Effective Date:</strong>  ${org.EFFECTIVE_DATE}</li>
-              </u>
+              ${logo}
+              <p>${mission}
+              </p>
+              <div id="website" class="clear">
+                ${website}
+              </div>
+              <p>
+                <strong>Address:</strong> ${org.ORGANIZATION_ADDRESS}<br/>
+                <strong>Meeting Location Address:</strong>  ${org.MEETING_LOCATION_ADDRESS}<br/>
+                <strong>Expiration Year:</strong>   ${org.EXPIRATIONYEAR}<br/>
+                <strong>Effective Date:</strong>  ${org.EFFECTIVE_DATE}<br/>
+              </p>
             </div>
           </div>
         </div>
@@ -286,7 +390,6 @@
             layersOnMap[type] = [];
 
           }
-
           map.addSource(id + '-source', {
             'type': 'geojson',
             'data': rco
@@ -313,10 +416,6 @@
           });
           map.on('mouseleave', id, () => {
             map.getCanvas().style.cursor = '';
-          });
-
-          map.on('mouseleave', id, () => {
-
             map.setFeatureState(
               { source: id + '-source', id: id },
               { hover: false }
@@ -398,13 +497,13 @@
         });
       }
 
-      function updateFeaturesForListing(map, layersOnMap) {
+      function updateFeaturesForListing(map, layersOnMap, data) {
         const features = map.queryRenderedFeatures({ layers: layersOnMap[currentType] });
         if (features) {
           const uniqueFeatures = getUniqueFeatures(features, 'id');
           const sortedFeatures = uniqueFeatures.sort((a, b) => a.properties.ORGANIZATION_NAME > b.properties.ORGANIZATION_NAME ? 1 : -1 );
 
-          renderListings(sortedFeatures);
+          renderListings(sortedFeatures, data);
         }
       }
 
@@ -427,16 +526,24 @@
         zoom: 10
       });
 
+      const mapInset = new mapboxgl.Map({
+        container: 'map-inset',
+        style: 'mapbox://styles/mapbox/light-v11',
+        center: [lon, lat],
+        zoom: 11
+      });
+
       const geocoder = new MapboxGeocoder({
           accessToken: mapboxgl.accessToken,
           mapboxgl: mapboxgl,
           placeholder: 'Enter your address to find your RCOs'
       });
 
-     document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
+      document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 
       map.addControl(new mapboxgl.NavigationControl());
-      
+      mapInset.addControl(new mapboxgl.NavigationControl());
+
       fetch(labels_file)
       .then(response => response.json())
       .then(label_data => {
@@ -465,12 +572,26 @@
             });
             const initialOrgs = initialOrgData.map(org => org.properties);
             addToList(initialOrgs, "window-orgs");
-            modalListener(data);
-
             map.on('moveend', () => {
-              updateFeaturesForListing(map, layersOnMap);
+              updateFeaturesForListing(map, layersOnMap, data);
             });
           });
+
+          mapInset.on('load', () => {
+            const myModalEl = document.getElementById('orgModal')
+            myModalEl.addEventListener('shown.bs.modal', function (event) {
+              const id = event.relatedTarget.getAttribute('data-org-id');
+              const modal = document.getElementById("org-modal-content-inner");
+              const org = data.filter((org) => org.properties.OBJECTID == id)[0];
+              clicked = id;
+              modalUpdate(modal, org, id, mapInset);
+            });
+            myModalEl.addEventListener('hide.bs.modal', function(event) {
+              const id = clicked;
+              mapInset.removeLayer(id + '-inset');
+
+            });
+          })
         });
       });
     </script>
