@@ -191,7 +191,6 @@
 
         mapInset.style.width = "200px";
         mapInset.resize();
-        console.log("no reset");
         const bbox = turf.bbox(org.geometry);
         mapInset.fitBounds(bbox);
       }
@@ -325,8 +324,7 @@
             </div>
             <div class="col-md-7">
               ${logo}
-              <p>${mission}
-              </p>
+              ${mission}
               <div id="website" class="clear">
                 ${website}
               </div>

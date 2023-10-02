@@ -1,12 +1,13 @@
 import json
 import csv
+import re
 
 with open('Zoning_RCO-6p.geojson') as rco_file:
   file_contents = rco_file.read()
 
 def open_csv():
     with open('data-updates.csv') as csv_file:
-        csv_read=csv.reader(csv_file, delimiter=',')
+        csv_read=csv.reader(csv_file, quotechar='"', delimiter=',', quoting=csv.QUOTE_ALL, skipinitialspace=True)
         return list(csv_read)
 
 parsed_json = json.loads(file_contents)
