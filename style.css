@@ -5,6 +5,7 @@
 }
 #layer-toggle button {
   margin-right: .8em;
+  margin-bottom: 10px;
 }
 .org-entry {
   margin: 10px 0;
@@ -96,12 +97,24 @@ h5 {
 }
 
 #map-inset {
-  position: absolute;
-  right: 30px;
-  bottom: 100px;
   height: 300px;
-  width: 700px;
+  width: 100%;
+  margin-top: 20px;
 }
 .modal-body > div {
     margin-bottom: 30px;
+}
+#org-modal-body p {
+  font-size:.95em;
+}
+@media screen and (max-width: 768px) {
+  .pr-0 {
+    padding-right: calc(var(--bs-gutter-x) * .5);
+  }
+  .org-entry {
+    margin: 10px -10px 10px 0;
+  }
+  #map-col {
+    margin-top: 0;
+  }
 }
