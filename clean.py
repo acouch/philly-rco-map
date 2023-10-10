@@ -27,7 +27,9 @@ for i,row in enumerate(parsed_json['features']):
     parsed_json['features'][i]['properties']['ORG_TYPE_LABEL'] = csv_row[3]
     parsed_json['features'][i]['properties']['ORG_WEBSITE'] = csv_row[4]
     parsed_json['features'][i]['properties']['ORG_MISSION'] = csv_row[5]
-    parsed_json['features'][i]['properties']['ORG_LOGO'] = csv_row[6]
+    if (csv_row[6]):
+        parsed_json['features'][i]['properties']['ORG_LOGO'] = id + '.' + csv_row[6]
+        print(parsed_json['features'][i]['properties']['ORG_LOGO'])
 
 with open('data.geojson', 'w', encoding='utf-8') as f:
     json.dump(parsed_json, f, ensure_ascii=False)

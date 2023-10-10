@@ -165,7 +165,6 @@
 
       function modalUpdate(modal, org, id, mapInset) {
         const mapInsetDiv = document.querySelector('#map-inset-outer');
-        console.log(mapInsetDiv)
 
         modal.innerHTML = "";
         let el = modalTemplate(org.properties);
@@ -289,7 +288,7 @@
 
       function modalTemplate(org) {
         const website = org.ORG_WEBSITE ? `<strong>Website:</strong> <a href="${org.ORG_WEBSITE}">${org.ORG_WEBSITE}</a>` : "";
-        const logo = org.ORG_LOGO ? `<img class="org-logo" src="${org.ORG_LOGO}"/>` : "";
+        const logo = org.ORG_LOGO ? `<img class="org-logo" src="https://acouch.github.io/philly-rco-map/imgs/logos/${org.ORG_LOGO}"/>` : "";
         const mission = org.ORG_MISSION ? `<h5>About</h5><p>${org.ORG_MISSION}</p>` : "";
         return `<div data-modal-id=${org.id}><div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">${org.ORGANIZATION_NAME}</h1>
@@ -383,11 +382,11 @@
           'type': 'FeatureCollection',
           'features': []
         };
-
         data.forEach(rco => {
           let id = String(rco.properties.OBJECTID);
           let type = String(rco.properties.ORG_TYPE_LABEL);
           rco.id = id;
+
           if (type in layersOnMap) {
             layersOnMap[type].push(id);
           }
@@ -578,6 +577,7 @@
         .then(unsorted => {
           const data = unsorted.features.sort((a, b) => a.properties.ORGANIZATION_NAME > b.properties.ORGANIZATION_NAME ? 1 : -1 );
           data.forEach((org, i) => org.properties.color = colors[i]);
+
           map.on('load', () => {
             // add sources and events
             let layersOnMap = addSourcesEvents(map, data, label_data);
