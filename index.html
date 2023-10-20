@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Philadelphia RCO Map</title>
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+    <link href="/assets/mapbox-gl/mapbox-gl.css" rel="stylesheet">
+    <script src="/assets/mapbox-gl/mapbox-gl.js"></script>
+    <script src="/assets/turf.min.js"></script>
     <script src="./colors.js"></script>
-    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
-    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
-    <link rel="stylesheet" href="./style.css">
+    <script src="/assets/mapbox-gl/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="/assets/mapbox-gl/mapbox-gl-geocoder.css" type="text/css">
+    <link rel="stylesheet" href="/assets/style.css">
 
   </head>
   <body>
@@ -61,7 +61,7 @@
                       <div class="card profile-card">
                         <div class="card-body pt-8">
                             <div class="card-img">
-                              <img src="/philly-rco-map/imgs/primary-contact.jpg" alt="profile-image" class="profile"/>
+                              <img src="/assets/imgs/primary-contact.jpg" alt="profile-image" class="profile"/>
                             </div>
                             <h5 class="card-title text-center"></h5>
                             <p class="card-text">
@@ -76,7 +76,7 @@
                       <div class="card profile-card">
                         <div class="card-body pt-8">
                             <div class="card-img">
-                              <img src="/philly-rco-map/imgs/alt-contact.jpg" alt="profile-image" class="profile"/>
+                              <img src="/assets/imgs/alt-contact.jpg" alt="profile-image" class="profile"/>
                             </div>
                             <h5 class="card-title text-center"></h5>
                             <p class="card-text">
@@ -117,8 +117,8 @@
       </main>
       <footer class="pt-5 my-5 text-body-secondary border-top">
       </footer>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+      <script src="/assets/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="/assets/bootstrap/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     </div>
     <script>
       const lat = '39.988144';
@@ -288,7 +288,7 @@
 
       function modalTemplate(org) {
         const website = org.ORG_WEBSITE ? `<strong>Website:</strong> <a href="${org.ORG_WEBSITE}">${org.ORG_WEBSITE}</a>` : "";
-        const logo = org.ORG_LOGO ? `<img class="org-logo" src="/philly-rco-map/imgs/logos/${org.ORG_LOGO}"/>` : "";
+        const logo = org.ORG_LOGO ? `<img class="org-logo" src="/assets/imgs/logos/${org.ORG_LOGO}"/>` : "";
         const mission = org.ORG_MISSION ? `<h5>About</h5><p>${org.ORG_MISSION}</p>` : "";
         return `<div data-modal-id=${org.id}><div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">${org.ORGANIZATION_NAME}</h1>
@@ -301,7 +301,7 @@
               <div class="card profile-card">
                 <div class="card-body pt-8">
                     <div class="card-img">
-                      <img src="/philly-rco-map/imgs/primary-contact.jpg" alt="profile-image" class="profile"/>
+                      <img src="/assets/imgs/primary-contact.jpg" alt="profile-image" class="profile"/>
                     </div>
                     <h5 class="card-title text-center">${org.PRIMARY_NAME}</h5>
                     <p class="card-text">
@@ -316,7 +316,7 @@
               <div class="card profile-card">
                 <div class="card-body pt-8">
                     <div class="card-img">
-                      <img src="/philly-rco-map/imgs/alt-contact.jpg" alt="profile-image" class="profile"/>
+                      <img src="/assets/imgs/alt-contact.jpg" alt="profile-image" class="profile"/>
                     </div>
                     <h5 class="card-title text-center">${org.ALTERNATE_NAME}</h5>
                     <p class="card-text">
