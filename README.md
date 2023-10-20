@@ -9,6 +9,39 @@ To add data to the map, update `data-updates.csv` and run `python update-data.py
 
 This is designed to support future updates of the City's GeoJSON file, hosted: https://opendataphilly.org/datasets/registered-community-organizations-rco-boundaries/ .
 
+### Dictionary
+
+The data for the map is stored in the `data.geojson` file. The map information is stored in the `geometry` attribute. The `properties` attribute contains the following data:
+
+<details>
+  <summary>Data origin</summary>
+</details>
+
+| Item | Origin |
+|----|----|
+|OBJECTID| [opendataphilly.org](https://opendata.arcgis.com/datasets/efbff0359c3e43f190e8c35ce9fa71d6_0.geojson) |
+|ORGANIZATION_NAME| [opendataphilly.org](https://opendata.arcgis.com/datasets/efbff0359c3e43f190e8c35ce9fa71d6_0.geojson) |
+|ORGANIZATION_ADDRESS| [opendataphilly.org](https://opendata.arcgis.com/datasets/efbff0359c3e43f190e8c35ce9fa71d6_0.geojson) |
+|MEETING_LOCATION_ADDRESS| [opendataphilly.org](https://opendata.arcgis.com/datasets/efbff0359c3e43f190e8c35ce9fa71d6_0.geojson) |
+|PREFFERED_CONTACT_METHOD|[opendataphilly.org](https://opendata.arcgis.com/datasets/efbff0359c3e43f190e8c35ce9fa71d6_0.geojson) |
+|PRIMARY_NAME| [opendataphilly.org](https://opendata.arcgis.com/datasets/efbff0359c3e43f190e8c35ce9fa71d6_0.geojson) |
+|PRIMARY_ADDRESS| [opendataphilly.org](https://opendata.arcgis.com/datasets/efbff0359c3e43f190e8c35ce9fa71d6_0.geojson) |
+|PRIMARY_EMAIL| [opendataphilly.org](https://opendata.arcgis.com/datasets/efbff0359c3e43f190e8c35ce9fa71d6_0.geojson) |
+|PRIMARY_PHONE| [opendataphilly.org](https://opendata.arcgis.com/datasets/efbff0359c3e43f190e8c35ce9fa71d6_0.geojson) |
+|P_PHONE_EXT| [opendataphilly.org](https://opendata.arcgis.com/datasets/efbff0359c3e43f190e8c35ce9fa71d6_0.geojson) |
+|ALTERNATE_NAME| [opendataphilly.org](https://opendata.arcgis.com/datasets/efbff0359c3e43f190e8c35ce9fa71d6_0.geojson) |
+|ALTERNATE_ADDRESS| [opendataphilly.org](https://opendata.arcgis.com/datasets/efbff0359c3e43f190e8c35ce9fa71d6_0.geojson) |
+|ALTERNATE_EMAIL| [opendataphilly.org](https://opendata.arcgis.com/datasets/efbff0359c3e43f190e8c35ce9fa71d6_0.geojson) |
+|ALTERNATE_PHONE| [opendataphilly.org](https://opendata.arcgis.com/datasets/efbff0359c3e43f190e8c35ce9fa71d6_0.geojson) |
+|A_PHONE_EXT| [opendataphilly.org](https://opendata.arcgis.com/datasets/efbff0359c3e43f190e8c35ce9fa71d6_0.geojson) |
+|EXPIRATIONYEAR| [opendataphilly.org](https://opendata.arcgis.com/datasets/efbff0359c3e43f190e8c35ce9fa71d6_0.geojson) |
+|EFFECTIVE_DATE| [opendataphilly.org](https://opendata.arcgis.com/datasets/efbff0359c3e43f190e8c35ce9fa71d6_0.geojson) |
+|LNI_ID| [opendataphilly.org](https://opendata.arcgis.com/datasets/efbff0359c3e43f190e8c35ce9fa71d6_0.geojson) |
+|ORG_TYPE_LABEL | `data-updates.csv` |
+|ORG_WEBSITE| `data-updates.csv` |
+|ORG_MISSION| `data-updates.csv` |
+|ORG_LOGO| `data-updates.csv` |
+
 ## Misc
 
 Ten smallest RCOs, by size:
