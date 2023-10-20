@@ -61,7 +61,7 @@
                       <div class="card profile-card">
                         <div class="card-body pt-8">
                             <div class="card-img">
-                              <img src="https://acouch.github.io/philly-rco-map/imgs/primary-contact.jpg" alt="profile-image" class="profile"/>
+                              <img src="/philly-rco-map/imgs/primary-contact.jpg" alt="profile-image" class="profile"/>
                             </div>
                             <h5 class="card-title text-center"></h5>
                             <p class="card-text">
@@ -76,7 +76,7 @@
                       <div class="card profile-card">
                         <div class="card-body pt-8">
                             <div class="card-img">
-                              <img src="https://acouch.github.io/philly-rco-map/imgs/alt-contact.jpg" alt="profile-image" class="profile"/>
+                              <img src="/philly-rco-map/imgs/alt-contact.jpg" alt="profile-image" class="profile"/>
                             </div>
                             <h5 class="card-title text-center"></h5>
                             <p class="card-text">
@@ -288,7 +288,7 @@
 
       function modalTemplate(org) {
         const website = org.ORG_WEBSITE ? `<strong>Website:</strong> <a href="${org.ORG_WEBSITE}">${org.ORG_WEBSITE}</a>` : "";
-        const logo = org.ORG_LOGO ? `<img class="org-logo" src="https://acouch.github.io/philly-rco-map/imgs/logos/${org.ORG_LOGO}"/>` : "";
+        const logo = org.ORG_LOGO ? `<img class="org-logo" src="/philly-rco-map/imgs/logos/${org.ORG_LOGO}"/>` : "";
         const mission = org.ORG_MISSION ? `<h5>About</h5><p>${org.ORG_MISSION}</p>` : "";
         return `<div data-modal-id=${org.id}><div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">${org.ORGANIZATION_NAME}</h1>
@@ -301,7 +301,7 @@
               <div class="card profile-card">
                 <div class="card-body pt-8">
                     <div class="card-img">
-                      <img src="https://acouch.github.io/philly-rco-map/imgs/primary-contact.jpg" alt="profile-image" class="profile"/>
+                      <img src="/philly-rco-map/imgs/primary-contact.jpg" alt="profile-image" class="profile"/>
                     </div>
                     <h5 class="card-title text-center">${org.PRIMARY_NAME}</h5>
                     <p class="card-text">
@@ -316,7 +316,7 @@
               <div class="card profile-card">
                 <div class="card-body pt-8">
                     <div class="card-img">
-                      <img src="https://acouch.github.io/philly-rco-map/imgs/alt-contact.jpg" alt="profile-image" class="profile"/>
+                      <img src="/philly-rco-map/imgs/alt-contact.jpg" alt="profile-image" class="profile"/>
                     </div>
                     <h5 class="card-title text-center">${org.ALTERNATE_NAME}</h5>
                     <p class="card-text">
