@@ -5,7 +5,7 @@ This map was built with a GeoJSON file <a href="https://opendataphilly.org/datas
 
 ## Data Updates
 
-To add data to the map, update `data-updates.csv` and run `python clean.py`. 
+To add data to the map, update `data-updates.csv` and run `python update-data.py`. 
 
 This is designed to support future updates of the City's GeoJSON file, hosted: https://opendataphilly.org/datasets/registered-community-organizations-rco-boundaries/ .
 
