@@ -15,7 +15,6 @@ The data for the map is stored in the `data.geojson` file. The map information i
 
 <details>
   <summary>Data origin</summary>
-</details>
 
 | Item | Origin |
 |----|----|
@@ -41,6 +40,7 @@ The data for the map is stored in the `data.geojson` file. The map information i
 |ORG_WEBSITE| `data-updates.csv` |
 |ORG_MISSION| `data-updates.csv` |
 |ORG_LOGO| `data-updates.csv` |
+</details>
 
 ## Misc
 
