@@ -101,22 +101,26 @@ h5 {
   .reverse {
     flex-direction: column-reverse;
   }
+  
   #map-col {
-    display: flex;
-    flex-direction: column;
+    display: block;
   }
-  #map {
-    order: 4;
-  }
-  #about {
-    order: 3;
-  }
-  #window-orgs {
-    order: 2;
-  }
-  #geocoder {
-    order: 1;
-  }
+}
+#map-col {
+  display: flex;
+  flex-direction: column;
+}
+#map {
+  order: 4;
+}
+#about {
+  order: 3;
+}
+#window-orgs {
+  order: 2;
+}
+#geocoder {
+  order: 1;
 }
 @media screen and (max-width: 768px) {
   .pr-0 {
@@ -127,7 +131,6 @@ h5 {
   }
   #map-col {
     margin-top: 0;
-    display: block;
   }
   #map {
     display: block;
