@@ -5,7 +5,13 @@ This map was built with a GeoJSON file <a href="https://opendataphilly.org/datas
 
 ## Data Updates
 
-To add data to the map, update `data-updates.csv` and run `python update-data.py`. 
+To add data to the map:
+
+1. Install geojson-precision: `npm i -g geojson-precision`
+2. Download latest city geosjon file from: https://opendataphilly.org/datasets/registered-community-organizations-rco-boundaries/ as `Zoning_RCO.geojson`
+3. run `geojson-precision -p 6 Zoning_RCO.geojson Zoning_RCO-6p.geojson` to reduce number of digits used for geojson which reduces files size by approximately half.
+4. Reconcile changes in `Zoning_RCO.geojson` with `data-updates.csv`, ie removing entries from `data-updates.csv` that are no longer in the geojson and assigning an ORG_ID to new ones. This is a very dumb part of the process that I plan to fix
+5. run `python update-data.py` to update the `data.geojson` file that drives the site.
 
 This is designed to support future updates of the City's GeoJSON file, hosted: https://opendataphilly.org/datasets/registered-community-organizations-rco-boundaries/ .
 
