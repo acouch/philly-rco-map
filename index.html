@@ -252,7 +252,7 @@
 
       function modalClickListener(button, modal, data, mapInset) {
         const id = button.getAttribute('data-org-id');
-        const org = data.filter((org) => org.properties.OBJECTID == id)[0];
+        const org = data.filter((org) => org.properties.ORG_ID == id)[0];
         button.addEventListener("click", modalUpdate(modal, org, id, mapInset));
       }
 
@@ -326,11 +326,11 @@
 
       function listTemplate(org) {
         const name = org.ORGANIZATION_NAME;
-        return `<div id="org-${org.OBJECTID}" class="col-sm-6 org-entry">
+        return `<div id="org-${org.ORG_ID}" class="col-sm-6 org-entry">
           <div class="card">
             <div class="card-body" style="border-color: ${org.color}">
               <h5 class="card-title">${org.ORGANIZATION_NAME}</h5>
-              <button type="button" class="btn btn-outline-secondary btn-sm org-modal-button" data-bs-toggle="modal" data-bs-target="#orgModal" data-org-id="${org.OBJECTID}">more info</button>
+              <button type="button" class="btn btn-outline-secondary btn-sm org-modal-button" data-bs-toggle="modal" data-bs-target="#orgModal" data-org-id="${org.ORG_ID}">more info</button>
             </div>
           </div></div>`
       }
@@ -407,7 +407,7 @@
       }
 
       function getOrgPropertyFromData(id, data) {
-        const org = data.filter(rco => rco.properties.OBJECTID == id);
+        const org = data.filter(rco => rco.properties.ORG_ID == id);
         return org[0].properties;
       }
 
@@ -432,7 +432,7 @@
           'features': []
         };
         data.forEach(rco => {
-          let id = String(rco.properties.OBJECTID);
+          let id = String(rco.properties.ORG_ID);
           let type = String(rco.properties.ORG_TYPE_LABEL);
           rco.id = id;
 
@@ -499,7 +499,7 @@
 
         data.forEach(rco => {
           if (rco.properties.ORG_TYPE_LABEL == type) {
-            let id = String(rco.properties.OBJECTID);
+            let id = String(rco.properties.ORG_ID);
             rco.id = id;
             map.addLayer({
               'id': id,
@@ -563,7 +563,7 @@
       function removeLayers(map, data, type) {
         data.forEach(rco => {
           if (rco.properties.ORG_TYPE_LABEL != type) {
-            let id = String(rco.properties.OBJECTID);
+            let id = String(rco.properties.ORG_ID);
             if (map.getLayer(id)) map.removeLayer(id);
             if (map.getLayer(id + '-line')) map.removeLayer(id + '-line');
           }
@@ -638,7 +638,7 @@
             addLabels(map, label_data, currentType);
 
             const initialOrgData = data.filter(org => {
-              const id = String(org.properties.OBJECTID);
+              const id = String(org.properties.ORG_ID);
               const index = layersOnMap[currentType].indexOf(id);
               if (index === -1) {
                 return false
@@ -657,7 +657,7 @@
             myModalEl.addEventListener('shown.bs.modal', function (event) {
               const id = event.relatedTarget.getAttribute('data-org-id');
               const modal = document.getElementById("org-modal-content-inner");
-              const org = data.filter((org) => org.properties.OBJECTID == id)[0];
+              const org = data.filter((org) => org.properties.ORG_ID == id)[0];
               clicked = id;
               modalUpdate(modal, org, id, mapInset);
             });
