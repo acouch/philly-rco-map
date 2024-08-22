@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Philadelphia RCO Map</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <link href="/assets/mapbox-gl/mapbox-gl.css" rel="stylesheet">
+    <script src="/assets/mapbox-gl/mapbox-gl.js"></script>
+    <script src="/assets/turf.min.js"></script>
+    <script src="./colors.js"></script>
+    <script src="/assets/mapbox-gl/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="/assets/mapbox-gl/mapbox-gl-geocoder.css" type="text/css">
+    <link rel="stylesheet" href="/assets/style.css">
+
+  </head>
+  <body>
+    <div>
+      <main>
+      <div id="rco-map" style="height: 600px"></div>
+      <script>
+        const index = '/rcos/index.json';
+        const urlParams = new URLSearchParams(window.location.search);
+        const rco = urlParams.get('rco');
+        const zoom = urlParams.get('zoom');
+        fetch(index)
+          .then(response => response.json())
+          .then(data => {
+            const org_id = Object.entries(data).find((name) => name[1] == rco)[0];
+            const file = '/rcos/' + org_id + '.geojson';
+            fetch(file)
+              .then(response => response.json())
+              .then(rco_data => {
+              const center = turf.center(rco_data);
+              const lat = center.geometry.coordinates[1];
+              const lon = center.geometry.coordinates[0];
+
+              mapboxgl.accessToken = 'pk.eyJ1IjoiYWNvdWNoMSIsImEiOiJDTy0zMFJrIn0.hewU0mOW08Wm5-0-Qr8TpQ';
+              const map = new mapboxgl.Map({
+                container: 'rco-map',
+                style: 'mapbox://styles/mapbox/light-v11',
+                center: [lon, lat],
+                zoom: zoom ? zoom : 13
+              });
+
+              map.on('load', () => {
+                map.addSource('rco', {
+                  'type': 'geojson',
+                  'data': rco_data 
+                });
+                map.addLayer({
+                  'id': 'rco',
+                  'type': 'line',
+                  'source': 'rco',
+                  'layout': {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                  },
+                  'paint': {
+                    'line-color': '#888',
+                    'line-width': 6
+                  }
+                });
+              });
+              map.addControl(new mapboxgl.NavigationControl());
+              mapInset.addControl(new mapboxgl.NavigationControl());
+            });
+          });
+      </script>
+      </main>
+    </div>
+    <script async data-id="101430897" src="//static.getclicky.com/js"></script>
+  </body>
+</html>

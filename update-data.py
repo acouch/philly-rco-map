@@ -23,7 +23,6 @@ rows = []
 
 for i,row in enumerate(parsed_json['features']):
     name = str(row['properties']['ORGANIZATION_NAME'])
-    print(name)
     csv_row = get_csv_by_name(name)
     id = csv_row[0]
     parsed_json['features'][i]['properties']['ORG_ID'] = id
@@ -32,7 +31,16 @@ for i,row in enumerate(parsed_json['features']):
     parsed_json['features'][i]['properties']['ORG_MISSION'] = csv_row[5]
     if (csv_row[6]):
         parsed_json['features'][i]['properties']['ORG_LOGO'] = id + '.' + csv_row[6]
-        print(parsed_json['features'][i]['properties']['ORG_LOGO'])
 
 with open('data.geojson', 'w', encoding='utf-8') as f:
     json.dump(parsed_json, f, ensure_ascii=False)
+
+index = {} 
+for rco in parsed_json['features']:
+  org_id = int(rco['properties']['ORG_ID']) 
+  index[org_id] = rco['properties']['ORGANIZATION_NAME']
+  with open(f"rcos/{org_id}.geojson", 'w', encoding='utf-8') as f:
+    json.dump(rco, f, ensure_ascii=False)
+
+with open('rcos/index.json', 'w', encoding='utf-8') as f:
+  json.dump(index, f, ensure_ascii=False)
