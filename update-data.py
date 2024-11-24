@@ -23,16 +23,14 @@ rows = []
 
 for i,row in enumerate(parsed_json['features']):
     name = str(row['properties']['ORGANIZATION_NAME'])
-    print(name)
     csv_row = get_csv_by_name(name)
-    print(csv_row)
     lni_id = csv_row[0]
     parsed_json['features'][i]['properties']['LNI_ID'] = lni_id
     parsed_json['features'][i]['properties']['ORG_TYPE_LABEL'] = csv_row[2]
     parsed_json['features'][i]['properties']['ORG_WEBSITE'] = csv_row[3]
     parsed_json['features'][i]['properties']['ORG_MISSION'] = csv_row[4]
     if (csv_row[5]):
-        parsed_json['features'][i]['properties']['ORG_LOGO'] = lni_id + '.' + csv_row[6]
+        parsed_json['features'][i]['properties']['ORG_LOGO'] = lni_id + '.' + csv_row[5]
 
 with open('data.geojson', 'w', encoding='utf-8') as f:
     json.dump(parsed_json, f, ensure_ascii=False)
