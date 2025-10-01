@@ -252,7 +252,7 @@
 
       function modalClickListener(button, modal, data, mapInset) {
         const id = button.getAttribute('data-org-id');
-        const org = data.filter((org) => org.properties.LNI_ID == id)[0];
+        const org = data.filter((org) => org.properties.lni_id == id)[0];
         button.addEventListener("click", modalUpdate(modal, org, id, mapInset));
       }
 
@@ -325,22 +325,22 @@
      };
 
       function listTemplate(org) {
-        const name = org.ORGANIZATION_NAME;
-        return `<div id="org-${org.LNI_ID}" class="col-sm-6 org-entry">
+        const name = org.organization_name;
+        return `<div id="org-${org.lni_id}" class="col-sm-6 org-entry">
           <div class="card">
             <div class="card-body" style="border-color: ${org.color}">
-              <h5 class="card-title">${org.ORGANIZATION_NAME}</h5>
-              <button type="button" class="btn btn-outline-secondary btn-sm org-modal-button" data-bs-toggle="modal" data-bs-target="#orgModal" data-org-id="${org.LNI_ID}">more info</button>
+              <h5 class="card-title">${org.organization_name}</h5>
+              <button type="button" class="btn btn-outline-secondary btn-sm org-modal-button" data-bs-toggle="modal" data-bs-target="#orgModal" data-org-id="${org.lni_id}">more info</button>
             </div>
           </div></div>`
       }
 
       function modalTemplate(org) {
-        const website = org.ORG_WEBSITE ? `<strong>Website:</strong> <a href="${org.ORG_WEBSITE}">${org.ORG_WEBSITE}</a>` : "";
+        const website = org.websites ? `<strong>Website:</strong> <a href="${org.websites}">${org.websites}</a>` : "";
         const logo = org.ORG_LOGO ? `<img class="org-logo" src="/assets/imgs/logos/${org.ORG_LOGO}"/>` : "";
         const mission = org.ORG_MISSION ? `<h5>About</h5><p>${org.ORG_MISSION}</p>` : "";
         return `<div data-modal-id=${org.id}><div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">${org.ORGANIZATION_NAME}</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">${org.organization_name}</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -352,12 +352,12 @@
                     <div class="card-img">
                       <img src="/assets/imgs/primary-contact.jpg" alt="profile-image" class="profile"/>
                     </div>
-                    <h5 class="card-title text-center">${org.PRIMARY_NAME}</h5>
+                    <h5 class="card-title text-center">${org.primary_name}</h5>
                     <p class="card-text">
-                      <strong>Preferred Contact Method</strong>: ${org.PREFFERED_CONTACT_METHOD}<br/>
-                      <strong>Primary Phone</strong>:  ${org.PRIMARY_PHONE}<br/>
-                      <strong>Primary Email</strong>:  ${org.PRIMARY_EMAIL}<br/>
-                      <strong>Primary Address</strong>: ${org.PRIMARY_ADDRESS}
+                      <strong>Preferred Contact Method</strong>: ${org.preffered_contact_method}<br/>
+                      <strong>Primary Phone</strong>:  ${org.primary_phone}<br/>
+                      <strong>Primary Email</strong>:  ${org.primary_email}<br/>
+                      <strong>Primary Address</strong>: ${org.primary_address}
                     </p>
                 </div>
               </div>
@@ -367,12 +367,12 @@
                     <div class="card-img">
                       <img src="/assets/imgs/alt-contact.jpg" alt="profile-image" class="profile"/>
                     </div>
-                    <h5 class="card-title text-center">${org.ALTERNATE_NAME}</h5>
+                    <h5 class="card-title text-center">${org.alternate_name}</h5>
                     <p class="card-text">
-                      <strong>Preferred Contact Method</strong>: ${org.PREFFERED_CONTACT_METHOD}<br/>
-                      <strong>Alternate Phone</strong>:  ${org.ALTERNATE_PHONE}<br/>
-                      <strong>Alternate Email</strong>:  ${org.ALTERNATE_EMAIL}</br>
-                      <strong>Alternate Address</strong>: ${org.ALTERNATE_ADDRESS}
+                      <strong>Preferred Contact Method</strong>: ${org.preffered_contact_method}<br/>
+                      <strong>Alternate Phone</strong>:  ${org.alternate_phone}<br/>
+                      <strong>Alternate Email</strong>:  ${org.alternate_email}</br>
+                      <strong>Alternate Address</strong>: ${org.alternate_address}
                     </p>
                 </div>
               </div>
@@ -384,10 +384,10 @@
                 ${website}
               </div>
               <p>
-                <strong>Address:</strong> ${org.ORGANIZATION_ADDRESS}<br/>
-                <strong>Meeting Location Address:</strong>  ${org.MEETING_LOCATION_ADDRESS}<br/>
-                <strong>Expiration Year:</strong>   ${org.EXPIRATIONYEAR}<br/>
-                <strong>Effective Date:</strong>  ${org.EFFECTIVE_DATE}<br/>
+                <strong>Address:</strong> ${org.organization_address}<br/>
+                <strong>Meeting Location Address:</strong>  ${org.meeting_location_address}<br/>
+                <strong>Expiration Year:</strong>   ${org.expirationyear}<br/>
+                <strong>Effective Date:</strong>  ${org.effective_date}<br/>
               </p>
             </div>
           </div>
@@ -407,7 +407,7 @@
       }
 
       function getOrgPropertyFromData(id, data) {
-        const org = data.filter(rco => rco.properties.LNI_ID == id);
+        const org = data.filter(rco => rco.properties.lni_id == id);
         return org[0].properties;
       }
 
@@ -432,7 +432,7 @@
           'features': []
         };
         data.forEach(rco => {
-          let id = String(rco.properties.LNI_ID);
+          let id = String(rco.properties.lni_id);
           let type = String(rco.properties.ORG_TYPE_LABEL);
           rco.id = id;
 
@@ -499,7 +499,7 @@
 
         data.forEach(rco => {
           if (rco.properties.ORG_TYPE_LABEL == type) {
-            let id = String(rco.properties.LNI_ID);
+            let id = String(rco.properties.lni_id);
             rco.id = id;
             map.addLayer({
               'id': id,
@@ -540,7 +540,7 @@
             'source': 'labels',
             'layout': {
               'text-size': 12,
-              'text-field': ['get', 'ORGANIZATION_NAME'],
+              'text-field': ['get', 'organization_name'],
               'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
               'text-radial-offset': 0.5,
               'text-justify': 'auto',
@@ -554,7 +554,7 @@
         const features = map.queryRenderedFeatures({ layers: layersOnMap[currentType] });
         if (features) {
           const uniqueFeatures = getUniqueFeatures(features, 'id');
-          const sortedFeatures = uniqueFeatures.sort((a, b) => a.properties.ORGANIZATION_NAME > b.properties.ORGANIZATION_NAME ? 1 : -1 );
+          const sortedFeatures = uniqueFeatures.sort((a, b) => a.properties.organization_name > b.properties.organization_name ? 1 : -1 );
 
           renderListings(sortedFeatures, data);
         }
@@ -563,7 +563,7 @@
       function removeLayers(map, data, type) {
         data.forEach(rco => {
           if (rco.properties.ORG_TYPE_LABEL != type) {
-            let id = String(rco.properties.LNI_ID);
+            let id = String(rco.properties.lni_id);
             if (map.getLayer(id)) map.removeLayer(id);
             if (map.getLayer(id + '-line')) map.removeLayer(id + '-line');
           }
@@ -624,7 +624,7 @@
         fetch(geo_file)
         .then(response => response.json())
         .then(unsorted => {
-          const data = unsorted.features.sort((a, b) => a.properties.ORGANIZATION_NAME > b.properties.ORGANIZATION_NAME ? 1 : -1 );
+          const data = unsorted.features.sort((a, b) => a.properties.organization_name > b.properties.organization_name ? 1 : -1 );
           data.forEach((org, i) => org.properties.color = colors[i]);
 
           map.on('load', () => {
@@ -638,7 +638,7 @@
             addLabels(map, label_data, currentType);
 
             const initialOrgData = data.filter(org => {
-              const id = String(org.properties.LNI_ID);
+              const id = String(org.properties.lni_id);
               const index = layersOnMap[currentType].indexOf(id);
               if (index === -1) {
                 return false
@@ -657,7 +657,7 @@
             myModalEl.addEventListener('shown.bs.modal', function (event) {
               const id = event.relatedTarget.getAttribute('data-org-id');
               const modal = document.getElementById("org-modal-content-inner");
-              const org = data.filter((org) => org.properties.LNI_ID == id)[0];
+              const org = data.filter((org) => org.properties.lni_id == id)[0];
               clicked = id;
               modalUpdate(modal, org, id, mapInset);
             });

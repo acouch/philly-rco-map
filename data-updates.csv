@@ -1,4 +1,4 @@
-LNI_ID,ORGANIZATION_NAME,ORG_TYPE_LABEL,ORG_WEBSITE,MISSION,LOGO_LINK,LOGO_ORIG,ORG_AREA,ORG_ID
+lni_id,organization_name,org_type_label,ORG_WEBSITE,MISSION,LOGO_LINK,LOGO_ORIG,ORG_AREA,ORG_ID
 101,A Concerned Community Association (ACCA),Community Organization,,,,,3941861,118
 431,ACANA CDC- United Southwest Neighbors,Community Organization,https://acanaus.org,"The mission of ACANA is to help refugees, immigrant families and all other residents of Philadelphia access legal, health and other social services with a special focus on women, children, youth and the elderly in their resettlement process in Pennsylvania.",png,https://acanaus.org/wp-content/uploads/2022/03/acanalogo.png,4662829,272
 103,ACHIEVEability,Community Organization,https://achieveability.org," ACHIEVEability is a nonprofit working to permanently break the generational cycle of poverty for low-income, single parent and homeless families through higher education, affordable housing , supportive services , community and economic development and accountability.",png,https://images.squarespace-cdn.com/content/v1/5acfa5c770e80292e11c573a/1524689948319-MJ15PY9UMND3PEJP5ON8/ACHIEVEability-FULL_MASTER_web_2-color-process.png?format=1500w,4394427,120
@@ -256,3 +256,9 @@ LNI_ID,ORGANIZATION_NAME,ORG_TYPE_LABEL,ORG_WEBSITE,MISSION,LOGO_LINK,LOGO_ORIG,
 74,52nd Democratic Ward,Ward,,,,,,
 77,53rd Republican Ward,Ward,,,,,,
 84,59th Democratic Ward,Ward,,,,,,
+28,28th Ward Democratic,Ward,,,,,
+339,Sports Complex Special Services District,Development,https://scssd.org,The Sports Complex Special Services District, or SCSSD for short, is a 501(c)(3) non-profit corporation that serves approximately 9,300 residents living in 4,200 households surrounding the Sports Complex venues in South Philadelphia.,svg,https://scssd.org/wp-content/uploads/2020/04/logo-sdssc.svg,
+91,64th Democratic Executive Ward Committee,Ward,,,,,
+543,Somerton Neighbor's Association,Community Organization,,,,,
+544,19th Ward Committee RCO,Ward,,,,,
+545,Neighbors Across Market,Community Organization,,,,,

@@ -14,7 +14,7 @@ parsed_json = json.loads(file_contents)
 
 csv_data = open_csv()
 
-def get_csv_by_name(name):
+def get_csv_row_by_name(name):
   for row in csv_data:
     if (row[1] == name):
         return row
@@ -22,23 +22,25 @@ def get_csv_by_name(name):
 rows = []
 
 for i,row in enumerate(parsed_json['features']):
-    name = str(row['properties']['ORGANIZATION_NAME'])
-    csv_row = get_csv_by_name(name)
-    lni_id = csv_row[0]
-    parsed_json['features'][i]['properties']['LNI_ID'] = lni_id
-    parsed_json['features'][i]['properties']['ORG_TYPE_LABEL'] = csv_row[2]
-    parsed_json['features'][i]['properties']['ORG_WEBSITE'] = csv_row[3]
-    parsed_json['features'][i]['properties']['ORG_MISSION'] = csv_row[4]
-    if (csv_row[5]):
-        parsed_json['features'][i]['properties']['ORG_LOGO'] = lni_id + '.' + csv_row[5]
+    name = str(row['properties']['organization_name'])
+    csv_row = get_csv_row_by_name(name)
+    if not csv_row:
+       print(f"Can't find {name}, id {parsed_json['features'][i]['properties']['lni_id']}")
+    else:
+      lni_id = csv_row[0]
+        
+      parsed_json['features'][i]['properties']['ORG_TYPE_LABEL'] = csv_row[2]
+      parsed_json['features'][i]['properties']['ORG_MISSION'] = csv_row[4]
+      if (csv_row[5]):
+          parsed_json['features'][i]['properties']['ORG_LOGO'] = lni_id + '.' + csv_row[5]
 
 with open('data.geojson', 'w', encoding='utf-8') as f:
     json.dump(parsed_json, f, ensure_ascii=False)
 
 index = {} 
 for rco in parsed_json['features']:
-  lni_id = int(rco['properties']['LNI_ID']) 
-  index[lni_id] = rco['properties']['ORGANIZATION_NAME']
+  lni_id = int(rco['properties']['lni_id']) 
+  index[lni_id] = rco['properties']['organization_name']
   with open(f"rcos/{lni_id}.geojson", 'w', encoding='utf-8') as f:
     json.dump(rco, f, ensure_ascii=False)
 
